@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '>= 0.18', '< 2.0'
+gem 'devise', '~> 4.6', '>= 4.6.2'
 
 
 group :development, :test do
