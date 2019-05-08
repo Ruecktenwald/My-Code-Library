@@ -8,7 +8,7 @@
 
 ## Features:
 - require User signin - to CRUD
-- Code Language Libraries/Pages - create resource posts with code instruction for build tasks (RoR, Javascript)
+- Code Language ReferenceGuides/Pages - create resource posts with code instruction for build tasks (RoR, Javascript)
 - 
 
 ## UI:
