@@ -1,13 +1,17 @@
-<%= form_for @post do |f| %>
-	
-	<%= f.select :category, options_for_select([["Select One", ""], "Rails", "Javascript", "HTML", "Ruby"]), :class => 'genForm_dropBox' %>
 
-	<%= f.text_field :description %>
+<div class="container middle">
 
-	<%= f.text_area :code %>
+	<%= form_for @post do |f| %>
+	<%= f.select :category, options_for_select([["Select One", ""], "Rails", "Javascript", "HTML", "Ruby"]), :class => 'genForm_dropBox' %><br><br>
+	<%= f.label :description %><br>
+	<%= f.text_field :description %><br><br>
+	<%= f.label :code %><br>
+	<%= f.text_area :code %><br><br>
 
-	<%= f.submit "Save" %>
 
-<% end %>
+	<%= f.submit "Save" %><br>
 
-<%= link_to 'Delete', @post, class: 'button', method: :delete, data: { confirm: 'Are you sure?' } %>
+	<% end %>
+	<br>
+	<%= link_to 'Delete', @post, class: 'button', method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

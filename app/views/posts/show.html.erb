@@ -1,5 +1,10 @@
-<%= @post.category %> <br>
-<%= @post.description %><br>
-<%= @post.code %><br>
 
-<%= link_to 'Edit', edit_post_path(@post) %>
+<div class="container middle footer">
+	<%= @post.category %> <br>
+	<%= @post.description %><br>
+	<%= @post.code %><br>
+	<br>
+
+	<%= link_to 'Edit', edit_post_path(@post) %>
+</div>
+

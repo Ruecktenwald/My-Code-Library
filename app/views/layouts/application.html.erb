@@ -18,17 +18,12 @@
 	<li class="nav-item">
 		<%= link_to "Home", root_path, class: "nav-link home-space"%>
 	</li>
+	<li class="nav-item ">	
+		<%= link_to 'New Post', new_post_path, class: "nav-link home-space" %>
+	</li>
 </ul>
 
-<div class="dropdown dropdownPos">	
-	<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-		Action
-	</button>
-	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-		<%= link_to 'New Post', new_post_path, class: "dropdown-item" %>
-		<a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
-	</div>
-</div>
+
 
 <ul class="nav justify-content-center">
 	<li class="nav-item nav-space">
@@ -51,7 +46,20 @@
 	<%= yield %>
 </body>
 
-<footer>
-	
+<footer class="footer">
+	<ul class="nav justify-content-center">
+		<li class="nav-item nav-space">
+			<%= link_to 'Rails', filtered_posts_path(:rails), class: "nav-link" %>
+		</li>
+		<li class="nav-item nav-space">
+			<%= link_to 'Javascript', filtered_posts_path(:javascript), class: "nav-link" %>
+		</li>
+		<li class="nav-item nav-space">
+			<%= link_to 'HTML', filtered_posts_path(:html), class: "nav-link" %>
+		</li>
+		<li class="nav-item nav-space">
+			<%= link_to 'Ruby', filtered_posts_path(:ruby), class: "nav-link" %>
+		</li>
+	</ul>
 </footer>
 </html>
