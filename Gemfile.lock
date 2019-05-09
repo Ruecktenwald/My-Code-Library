@@ -1,45 +1,3 @@
-GIT
-  remote: https://github.com/rspec/rspec-core.git
-  revision: 7727a078e01df1677fe8ce787e3a751111364e00
-  specs:
-    rspec-core (3.9.0.pre)
-      rspec-support (= 3.9.0.pre)
-
-GIT
-  remote: https://github.com/rspec/rspec-expectations.git
-  revision: 12bca283fc60fc1da3851de704bb5ce6fe416d85
-  specs:
-    rspec-expectations (3.9.0.pre)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (= 3.9.0.pre)
-
-GIT
-  remote: https://github.com/rspec/rspec-mocks.git
-  revision: 55f0b116dc8c15a7acef9e7619bb0a3925bd18fa
-  specs:
-    rspec-mocks (3.9.0.pre)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (= 3.9.0.pre)
-
-GIT
-  remote: https://github.com/rspec/rspec-rails.git
-  revision: e6fe572a9bda9a8d9c5cd1660b6cb62167caaecc
-  specs:
-    rspec-rails (3.9.0.pre)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
-      railties (>= 3.0)
-      rspec-core (= 3.9.0.pre)
-      rspec-expectations (= 3.9.0.pre)
-      rspec-mocks (= 3.9.0.pre)
-      rspec-support (= 3.9.0.pre)
-
-GIT
-  remote: https://github.com/rspec/rspec-support.git
-  revision: 4579133922b6fb2a615a0dac0ae8d0b4f6fabfff
-  specs:
-    rspec-support (3.9.0.pre)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -83,8 +41,14 @@ GEM
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     arel (7.1.4)
+    autoprefixer-rails (9.5.1.1)
+      execjs
     bcrypt (3.1.12)
     bindex (0.7.0)
+    bootstrap (4.3.1)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 1.14.3, < 2)
+      sassc-rails (>= 2.0.0)
     builder (3.2.3)
     byebug (11.0.1)
     capybara (3.18.0)
@@ -144,6 +108,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pg (1.1.4)
+    popper_js (1.14.5)
     public_suffix (3.0.3)
     puma (3.12.1)
     rack (2.0.7)
@@ -180,6 +145,23 @@ GEM
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
+    rspec-core (3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-expectations (3.8.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-mocks (3.8.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-rails (3.8.2)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.8.0)
+      rspec-expectations (~> 3.8.0)
+      rspec-mocks (~> 3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-support (3.8.0)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -191,6 +173,15 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    sassc (2.0.1)
+      ffi (~> 1.9)
+      rake
+    sassc-rails (2.1.1)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -230,6 +221,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap (~> 4.3, >= 4.3.1)
   byebug
   capybara (~> 3.18)
   coffee-rails (~> 4.2)
@@ -241,11 +233,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.0)
   rails (~> 5.0.7, >= 5.0.7.2)
-  rspec-core!
-  rspec-expectations!
-  rspec-mocks!
-  rspec-rails!
-  rspec-support!
+  rspec-rails
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
