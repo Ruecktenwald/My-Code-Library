@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+
+.home-space {
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+
+.nav-space {
+	margin-right: 35px;
+	margin-left: 35px;
+	margin-bottom: 50px;
+}
+
+.dropdownPos {
+	float: right;
+	margin-right: 100px;
+	display: block;
+}
