@@ -1,0 +1,13 @@
+<h1>New</h1>
+
+<%= form_for @post do |f| %>
+	
+	<%= f.text_field :category %>
+
+	<%= f.text_field :description %>
+
+	<%= f.text_area :code %>
+
+	<%= f.submit "Save" %>
+
+<% end %>
