@@ -12,7 +12,7 @@
  *
  *= require_tree .
  *= require_self
- 
+
  */
 
 
@@ -68,3 +68,8 @@
 .jumbotron {
     background-color:transparent !important; 
 }
+
+
+
+
+
