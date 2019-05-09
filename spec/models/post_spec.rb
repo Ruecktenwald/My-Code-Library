@@ -12,8 +12,16 @@ RSpec.describe Post, type: :model do
   	end
 
   	it "cannot be created" do
+  		@post.category = nil
   		expect(@post).to_not be_valid
   	end
-
+  	it "cannot be created" do
+  		@post.description = nil
+  		expect(@post).to_not be_valid
+  	end
+  	it "cannot be created" do
+  		@post.code = nil
+  		expect(@post).to_not be_valid
+  	end
   end
 end
