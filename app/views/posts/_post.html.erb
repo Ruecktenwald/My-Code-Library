@@ -1,11 +1,38 @@
-<tr>
-	<td>
-		<%= link_to post.category, post_path(post) %>
-	</td>
-	<td>
-		<%= link_to post.description, post_path(post) %>
-	</td>
-	<td>
-		<%= link_to post.code, post_path(post) %>
-	</td>
-</tr>
+
+<div id="accordion-<%= post.id %>">
+	<div class="card">
+		<div class="card-header">
+			<a class=" card-link" data-toggle="collapse" href="#collapse-<%= post.id %>">
+				<%= post.description %>
+			</a>
+		</div>
+		<div id="collapse-<%= post.id %>" data-toggle="collapse show" data-parent="#accordion-<%= post.id %>">
+			<div class="card-body code-background text-color">
+				<%= post.code %>
+				<br>
+				<%= link_to 'view', post_path(post) %>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

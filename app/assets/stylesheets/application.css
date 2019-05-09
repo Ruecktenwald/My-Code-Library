@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ 
  */
 
 
@@ -23,12 +24,16 @@
 .middle {
 	text-align: center;
 }
-
+.new-post {
+	position: absolute;
+  top: 8px;
+  right: 16px;
+}
 .nav-space {
 	margin-right: 35px;
 	margin-left: 35px;
 	margin-bottom: 5px;
-	margin-top: 30px;
+	margin-top: 0px;
 }
 
 .dropdownPos {
@@ -46,7 +51,20 @@
 	margin-left: 30px;
 	padding-left: 30px;
 }
+.text-color {
+	color: #C9DB00;
+}
+.code-background {
+	background-color: #032533;
+}
+.text-center{
+	vertical-align: center;
 
-.new-float {
+}
+.home-background {
+	background-color: #032533;
+}
 
+.jumbotron {
+    background-color:transparent !important; 
 }
