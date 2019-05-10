@@ -12,64 +12,80 @@
  *
  *= require_tree .
  *= require_self
-
  */
 
 
-.home-space {
-	margin-left: 15px;
-	margin-top: 10px;
-}
+ .home-space {
+ 	margin-left: 15px;
+ 	margin-top: 10px;
+ }
 
-.middle {
-	text-align: center;
-}
-.new-post {
-	position: absolute;
-  top: 8px;
-  right: 16px;
-}
-.nav-space {
-	margin-right: 35px;
-	margin-left: 35px;
-	margin-bottom: 5px;
-	margin-top: 0px;
-}
+ .middle {
+ 	text-align: center;
+ }
+ .new-post {
+ 	position: absolute;
+ 	top: 10px;
+ 	right: 15px;
+ }
+ .nav-space {
+ 	margin-right: 35px;
+ 	margin-left: 35px;
+ 	margin-bottom: 5px;
+ 	margin-top: 0px;
+ }
 
-.dropdownPos {
-	text-align: right;
-	margin-right: 100px;
-	margin-bottom: 10px;
-	
-}
+ .text-left {
+ 	text-align: left;
+ }
 
-.footer {
-	margin-top: 100px;
-}
+ .dropdownPos {
+ 	text-align: right;
+ 	margin-right: 100px;
+ 	margin-bottom: 10px;
 
-.title {
-	margin-left: 30px;
-	padding-left: 30px;
-}
-.text-color {
-	color: #C9DB00;
-}
-.code-background {
-	background-color: #032533;
-}
-.text-center{
-	vertical-align: center;
+ }
 
-}
-.home-background {
-	background-color: #032533;
-}
+ .footer {
+ 	margin-top: 100px;
+ }
 
-.jumbotron {
-    background-color:transparent !important; 
-}
+ .title {
+ 	margin-left: 30px;
+ 	padding-left: 30px;
+ }
+ .text-color {
+ 	color: #C9DB00;
+ }
+ .code-background {
+ 	background-color: #032533;
+ }
+ .text-center{
+ 	vertical-align: center;
 
+ }
+ .home-background {
+ 	background-color: #032533;
+ }
 
+ .jumbotron {
+ 	background-color:transparent !important; 
+ }
+
+ .myaccordion .btn-link:hover,
+ .myaccordion .btn-link:focus {
+ 	text-decoration: none;
+ }
+
+ .myaccordion .card,
+ .myaccordion .card:last-child .card-header {
+ 	border: none;
+ }
+ .myaccordion {
+ 	max-width: 600px;
+ 	margin: 10px auto;
+ 	box-shadow: 0 0 1px rgba(0,0,0,0.1);
+ }
 
 
 

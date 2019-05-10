@@ -18,6 +18,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'

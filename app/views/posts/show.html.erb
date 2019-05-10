@@ -1,10 +1,18 @@
 
+
 <div class="container middle footer">
 	<%= @post.category %> <br>
 	<%= @post.description %><br>
-	<%= @post.code %><br>
+	<div class="middle">
+		<pre class="code-background "> 
+			<code class=" text-color"> 
+				<%= @post.code %> 
+			</code>
+		</pre>
+	</div>
 	<br>
 
 	<%= link_to 'Edit', edit_post_path(@post) %>
 </div>
+
 

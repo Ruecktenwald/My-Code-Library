@@ -6,7 +6,7 @@
 	<%= f.label :description %><br>
 	<%= f.text_field :description %><br><br>
 	<%= f.label :code %><br>
-	<%= f.text_area :code %><br><br>
+	<%= f.text_area :code, cols: 40 %><br><br>
 
 
 	<%= f.submit "Save" %><br>
@@ -15,3 +15,4 @@
 	<br>
 	<%= link_to 'Delete', @post, class: 'btn', method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
+
