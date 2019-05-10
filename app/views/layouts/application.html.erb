@@ -11,54 +11,48 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
 	
 </head>
 
 <ul class="nav">
-	<li class="nav-item">
+	<li class=" nav-item">
 		<%= link_to "Home", root_path, class: "nav-link home-space"%>
 	</li>
-	<li class="new-post">	
+	<li class=" nav-item new-post">	
 		<%= link_to 'New Post', new_post_path, class: "nav-link home-space" %>
 	</li>
 </ul>
 
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-3 home-space">
+			<form action="" class="search-form">
+				<div class="form-group has-feedback">
+					<label for="search" class="sr-only">Search</label>
+					<input type="text" class="form-control" name="search" id="search" placeholder="search">
+				</div>
+				<h2></h2>
+			</form>
+		</div>
+	</div>
+</div>
+
 
 <ul class="nav justify-content-center">
+	
+	<% Post::CATEGORIES.each do |category| %>
 	<li class="nav-item nav-space">
-		<%= link_to 'Rails', filtered_posts_path(:rails), class: "nav-link" %>
+		<%= link_to "#{category}", category_posts_path(category), class: "nav-link" %>
 	</li>
-	<li class="nav-item nav-space">
-		<%= link_to 'Javascript', filtered_posts_path(:javascript), class: "nav-link" %>
-	</li>
-	<li class="nav-item nav-space">
-		<%= link_to 'HTML', filtered_posts_path(:html), class: "nav-link" %>
-	</li>
-	<li class="nav-item nav-space">
-		<%= link_to 'Ruby', filtered_posts_path(:ruby), class: "nav-link" %>
-	</li>
+ <%end%>
 </ul>
-
-
 
 <body>
 	<%= yield %>
 </body>
 
 <footer class="footer">
-	<ul class="nav justify-content-center">
-		<li class="nav-item nav-space">
-			<%= link_to 'Rails', filtered_posts_path(:rails), class: "nav-link" %>
-		</li>
-		<li class="nav-item nav-space">
-			<%= link_to 'Javascript', filtered_posts_path(:javascript), class: "nav-link" %>
-		</li>
-		<li class="nav-item nav-space">
-			<%= link_to 'HTML', filtered_posts_path(:html), class: "nav-link" %>
-		</li>
-		<li class="nav-item nav-space">
-			<%= link_to 'Ruby', filtered_posts_path(:ruby), class: "nav-link" %>
-		</li>
-	</ul>
+	
 </footer>
 </html>

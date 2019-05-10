@@ -1,20 +1,15 @@
 class PostsController < ApplicationController
 	before_action :set_post, only: [:show,:edit,:update,:destroy]
 
-	def index
-		case params[:scope]
-		when 'rails'
-			@posts = Post.rails
-		when 'javascript'
-			@posts = Post.javascript
-		when 'html'
-			@posts = Post.html
-		when 'ruby'
-			@posts = Post.ruby
-		else 
-			@posts = Post.all
-		end
 
+	def index
+
+		Post::CATEGORIES.each do |category|
+			case params[:scope]
+				when "#{category}"
+					@posts = Post.where(category: category)
+			end
+		end
 	end
 
 	def new

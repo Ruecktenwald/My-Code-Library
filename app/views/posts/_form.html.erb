@@ -1,7 +1,7 @@
 <div class="container middle ">
 
 	<%= form_for @post do |f| %>
-	<%= f.select :category, options_for_select([["Select One", ""], "Rails", "Javascript", "HTML", "Ruby"]), :class => 'genForm_dropBox' %><br><br>
+	<%= f.select :category, Post::CATEGORIES, prompt: "Pick one" %><br><br>
 	<%= f.label :description %><br>
 	<%= f.text_field :description %><br><br>
 	<%= f.label :code %><br>
