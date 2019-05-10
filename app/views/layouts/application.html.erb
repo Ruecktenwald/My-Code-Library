@@ -40,11 +40,12 @@
 
 <ul class="nav justify-content-center">
 
-	<% Post::CATEGORIES[0..3].each do |category| %>
+	<% @categories.each do |category| %>
 	<li class="nav-item nav-space">
 		<%= link_to "#{category}", category_posts_path(category), class: "nav-link" %>
 	</li>
 	<%end%>
+
 </ul>
 
 <body>
