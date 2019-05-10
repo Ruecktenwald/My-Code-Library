@@ -38,14 +38,13 @@
 	</div>
 </div>
 
-
 <ul class="nav justify-content-center">
-	
-	<% Post::CATEGORIES.each do |category| %>
+
+	<% Post::CATEGORIES[0..3].each do |category| %>
 	<li class="nav-item nav-space">
 		<%= link_to "#{category}", category_posts_path(category), class: "nav-link" %>
 	</li>
- <%end%>
+	<%end%>
 </ul>
 
 <body>
@@ -53,6 +52,12 @@
 </body>
 
 <footer class="footer">
-	
+	<ul class="nav justify-content-center">
+		<% Post::CATEGORIES.each do |category| %>
+		<li class="nav-item nav-space">
+			<%= link_to "#{category}", category_posts_path(category), class: "nav-link" %>
+		</li>
+		<%end%>
+	</ul>
 </footer>
 </html>

@@ -3,7 +3,6 @@ class PostsController < ApplicationController
 
 
 	def index
-
 		Post::CATEGORIES.each do |category|
 			case params[:scope]
 				when "#{category}"
