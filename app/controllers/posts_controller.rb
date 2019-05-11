@@ -23,7 +23,6 @@ def create
     redirect_to(@post, :flash => [:success])
   else
    render :new
-   flash_now!(:error)
  end
 end
 
