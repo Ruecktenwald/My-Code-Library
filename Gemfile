@@ -16,8 +16,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'devise', '~> 4.6', '>= 4.6.2'
-gem 'bootstrap', '~> 4.3', '>= 4.3.1'
-
+gem 'bootstrap', '~> 4.1.3'
+gem "bootstrap_flash_messages", "~> 1.0.1"
 
 group :development, :test do
   gem 'byebug', platform: :mri

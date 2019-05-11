@@ -20,9 +20,10 @@ def create
   @post.user_id = current_user.id
 
   if @post.save 
-   redirect_to @post, notice: "You successfully created a new post!"
- else
+    redirect_to(@post, :flash => [:success])
+  else
    render :new
+   flash_now!(:error)
  end
 end
 
@@ -46,7 +47,7 @@ def destroy
 end
 
 def search  
-  
+
 end
 
 

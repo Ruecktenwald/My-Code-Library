@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<%= csrf_meta_tags %>
-
+  
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -14,7 +14,7 @@
 
 	
 </head>
-
+<div id="flash_messages"><%= flash_messages %></div>
 <ul class="nav">
 	<li class=" nav-item">
 		<%= link_to "Home", root_path, class: "nav-link home-space"%>
@@ -32,6 +32,7 @@
 	</li>
 	<%end%>
 </ul>
+
 
 <body>
 	<%= yield %>

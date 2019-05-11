@@ -1,0 +1,17 @@
+<% if object.errors.any? %>
+<section id="errors">
+  <header class="error">
+   <!-- <h3>
+      Oops! The <%= object.class.name.humanize.downcase %> could not be saved. 
+    </h3>-->
+    <h5 class="text-left">
+      Please correct the following <%= pluralize(object.errors.count, "error") %>:
+    </h5>
+  </header>
+  <ul class="text-left">
+    <% object.errors.full_messages.each do |message| %>
+    <li class="text-left"><%= message %></li>
+    <% end %>
+  </ul>
+</section>
+<% end %>
