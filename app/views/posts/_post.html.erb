@@ -1,31 +1,32 @@
-<div id="accordion-<%= post.id %>" class="myaccordion">
-	<div class="card">
-		<div class="card-header" id="heading-<%= post.id %>">
-			<h2 class="mb-3">
-				<button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-<%= post.id %>" aria-expanded="false" aria-controls="collapse-<%= post.id %>">
-					<%= post.description %>
-					<span class="fa-stack fa-sm">
-						<i class="fas fa-circle fa-stack-2x"></i>
-						<i class="fas fa-plus fa-stack-1x fa-inverse"></i>
-					</span>
-				</button>
-			</h2>
-		</div>
-		<div id="collapse-<%= post.id %>" class="collapse" aria-labelledby="heading-<%= post.id %>" data-parent="#accordion-<%= post.id %>">
-			<div class="card-body code-background ">
-				<div>
-					<pre>
-						<code class="text-color">
-							<%= post.code %>
-						</code>
-					</pre>
-					<%= link_to 'view', post_path(post) %>
+<div class="container">
+	<div id="accordion-<%= post.id %>" class="myaccordion">
+		<div class="card">
+			<div class="card-header" id="heading-<%= post.id %>">
+				<h2 class="mb-3">
+					<button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-<%= post.id %>" aria-expanded="false" aria-controls="collapse-<%= post.id %>">
+						<%= post.description %>
+						<span class="fa-stack fa-sm">
+							<i class="fas fa-circle fa-stack-2x"></i>
+							<i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+						</span>
+					</button>
+				</h2>
+			</div>
+			<div id="collapse-<%= post.id %>" class="collapse" aria-labelledby="heading-<%= post.id %>" data-parent="#accordion-<%= post.id %>">
+				<div class="card-body code-background ">
+					<div>
+						<pre>
+							<code class="text-color">
+								<%= post.code %>
+							</code>
+						</pre>
+						<%= link_to 'view', post_path(post) %>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
 
 
 

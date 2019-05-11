@@ -1,17 +1,17 @@
-<div class="container middle ">
+<div class=" middle myaccordion">
+	<div class="">
+		<%= form_for @post do |f| %>
+		<%= f.label :description %><br>
+		<%= f.text_field :description, size: "60x12" %><br><br>
 
-	<%= form_for @post do |f| %>
-	<%= f.select :category, Post::CATEGORIES, prompt: "Pick one" %><br><br>
-	<%= f.label :description %><br>
-	<%= f.text_field :description %><br><br>
-	<%= f.label :code %><br>
-	<%= f.text_area :code, cols: 40 %><br><br>
+		<%= f.label :code %> <br>
+		<%= f.text_area :code, size: "60x10" %><br><br>
+		<%= f.select :category,  Post::CATEGORIES, prompt: "Pick one"%><br><br>
 
 
-	<%= f.submit "Save" %><br>
-
-	<% end %>
-	<br>
-	<%= link_to 'Delete', @post, class: 'btn', method: :delete, data: { confirm: 'Are you sure?' } %>
+		<%= f.submit "Save", class: "btn btn-dark" %>
+		<%= link_to 'Delete', @post, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% end %>
+	</div>	
 </div>
 

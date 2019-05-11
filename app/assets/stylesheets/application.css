@@ -34,6 +34,16 @@
  	margin-bottom: 5px;
  	margin-top: 0px;
  }
+ .label-style{
+   color: #8C3503;
+   font-weight: bold;
+   font-size: 20px;
+ }
+
+ .label-style-btm {
+   color: #032533;
+   font-size: 40px;
+ }
 
  .text-left {
  	text-align: left;
@@ -60,6 +70,12 @@
  .code-background {
  	background-color: #032533;
  }
+
+ .code-background-show {
+  max-width: 600px;
+  background-color: #032533;
+ }
+
  .text-center{
  	vertical-align: center;
 

@@ -1,16 +1,22 @@
-<div class="container middle footer">
-	<%= @post.category %> <br>
-	<%= @post.description %><br>
-	<div class="middle">
-		<pre class="code-background "> 
-			<code class=" text-color"> 
-				<%= @post.code %> 
-			</code>
-		</pre>
+<div class="container  myaccordion">
+	<div class="label-style">
+		<%= @post.category %> 
+	</div>
+	<div class="label-style-btm middle">
+		<%= @post.description %><br>
+	</div>
+	<div class="code-background ">
+		<div class="container-fluid">
+			<pre class=" "> 
+				<code class="text-color"> 
+					<%= @post.code %> 
+				</code>
+			</pre>
+		</div>
 	</div>
 	<br>
 
 	<%= link_to 'Edit', edit_post_path(@post) %>
-</div>
+</div> 
 
 
