@@ -15,6 +15,7 @@
 	
 </head>
 <div id="flash_messages"><%= flash_messages %></div>
+<% if user_signed_in? %>
 <ul class="nav">
 	<li class=" nav-item">
 		<%= link_to "Home", root_path, class: "nav-link home-space"%>
@@ -23,17 +24,17 @@
 		<%= link_to 'New Post', new_post_path, class: "nav-link home-space" %>
 	</li> 
 
-	<% if user_signed_in? %>
+	
 	<li class=" nav-item new-post">	
 		<%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "nav-link home-space" %>
 	</li> 
 	<% else %>
-	<li class=" nav-item new-post">	
-		<%= link_to 'Sign In', new_user_session_path, class: "nav-link home-space" %>
-	</li> 
+	
 	<%end%>
 </ul>
 
+
+<% if user_signed_in? %>
 <hr style="border: .5px solid#032533;" />
 
 <ul class="nav justify-content-center">
@@ -43,13 +44,17 @@
 	</li>
 	<%end%>
 </ul>
-
+<%end%>
 
 <body>
 	<%= yield %>
 </body>
 
+<% if user_signed_in? %>
+
+
 <footer class="footer">
+	<hr style="border: .5px solid#032533;" />
 	<ul class="nav justify-content-center">
 		<% Post::CATEGORIES.each do |category| %>
 		<li class="nav-item nav-space">
@@ -58,4 +63,5 @@
 		<%end%>
 	</ul>
 </footer>
+<%end%>
 </html>
