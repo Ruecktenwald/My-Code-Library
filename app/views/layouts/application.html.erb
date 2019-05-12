@@ -14,7 +14,7 @@
 
 	
 </head>
-<div id="flash_messages"><%= flash_messages(:close, :fade, :fade_in) %></div>
+<div id="flash_messages"><%= flash_messages(:close) %></div>
 <% if user_signed_in? %>
 <ul class="nav">
 	<li class=" nav-item">
@@ -50,6 +50,13 @@
 	</li>
 	<%end%>
 </ul>
+
+<div class="container">
+	<div class="middle has-search">
+		<input type="text" class="search" placeholder="Search">
+	</div>
+</div>
+
 <%end%>
 
 <body>

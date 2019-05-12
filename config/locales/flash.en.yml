@@ -17,12 +17,12 @@ en:
          success: "Successfully created!"
          error: "Something went wrong. Please take a look at the form to see what went wrong."
     
-en:
- pundit:
-   default: 'You cannot perform this action.'
-   post_policy:
-     update?: 'You cannot edit this post!'
-     create?: 'You cannot create posts!'
+#en:
+ #pundit:
+  # default: 'You cannot perform this action.'
+  # post_policy:
+   #  update?: 'You cannot edit this post!'
+   #  create?: 'You cannot create posts!'
     #
     # Add flash messages for controller actions:
     # products:
