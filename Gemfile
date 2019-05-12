@@ -18,6 +18,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem "bootstrap", ">= 4.3.1"
 gem "bootstrap_flash_messages", "~> 1.0.1"
+gem 'bourbon'
+gem 'administrate', '~> 0.11.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
