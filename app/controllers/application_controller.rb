@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   before_action :set_categories
   
   
-private
+  private
   def set_categories
-  @categories = Post::CATEGORIES.first(4)
+    @categories = Post::CATEGORIES.first(4)
   end
 end

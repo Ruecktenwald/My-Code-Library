@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   def index 
    if params[:category]
-     @posts = Post.where(category: params[:category])
+     @posts = Post.where(category: params[:category]).posts_by current_user
    else 
     @posts = Post.all
   end
