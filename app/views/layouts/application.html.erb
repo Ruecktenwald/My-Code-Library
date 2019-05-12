@@ -19,11 +19,22 @@
 	<li class=" nav-item">
 		<%= link_to "Home", root_path, class: "nav-link home-space"%>
 	</li>
-	<li class=" nav-item new-post">	
+	<li class=" nav-item ">	
 		<%= link_to 'New Post', new_post_path, class: "nav-link home-space" %>
 	</li> 
 
+	<% if user_signed_in? %>
+	<li class=" nav-item new-post">	
+		<%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "nav-link home-space" %>
+	</li> 
+	<% else %>
+	<li class=" nav-item new-post">	
+		<%= link_to 'Sign In', new_user_session_path, class: "nav-link home-space" %>
+	</li> 
+	<%end%>
 </ul>
+
+<hr style="border: .5px solid#032533;" />
 
 <ul class="nav justify-content-center">
 	<% @categories.each do |category| %>
