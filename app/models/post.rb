@@ -4,7 +4,6 @@ class Post < ApplicationRecord
 
   scope :posts_by, ->(user) { where(user_id: user.id) }
 
-
   CATEGORIES = [
     "Rails",
     "Javascript",
@@ -17,5 +16,6 @@ class Post < ApplicationRecord
     "Typescript",
     "React"
   ]
-
+  
+  
   end
