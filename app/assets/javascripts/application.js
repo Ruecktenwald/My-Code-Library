@@ -17,3 +17,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+window.setTimeout(function() {
+  $(".alert").addClass("in");
+}, 600);
