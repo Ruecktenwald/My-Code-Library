@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	before_action :set_post, only: [:show,:edit,:update,:destroy]
+  before_action :set_post, only: [:show,:edit,:update,:destroy]
 
   def index 
     if params[:category]
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.delete
-    redirect_to posts_path, notice: 'Your post was deleted successfully'
+    redirect_to root_path, notice: 'Your post was deleted successfully'
   end
 
   def search  
