@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     root to: "users#index"
   end
 
-  get '/search' => 'posts#search', :as => 'search_page'
-	get "posts/category/:category" => 'posts#index', as: 'category_posts'
+  get 'search' => 'posts#search', :as => 'search_page'
+  get "posts/category/:category" => 'posts#index', as: 'category_posts'
   resources :posts
   devise_for :users
 

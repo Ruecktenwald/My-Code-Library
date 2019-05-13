@@ -22,6 +22,7 @@ gem 'bourbon'
 gem 'administrate', '~> 0.11.0'
 gem 'pundit', '~> 2.0', '>= 2.0.1'
 
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'

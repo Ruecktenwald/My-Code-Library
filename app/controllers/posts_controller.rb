@@ -46,14 +46,18 @@ class PostsController < ApplicationController
   end
 
   def search  
-
+    if params[:search].blank?  
+      redirect_to(root_path, alert: "Empty field!") and return  
+    else
+      @parameter = params[:search].downcase  
+      @results = Post.where("lower(description) LIKE :search", search: "%#{@parameter}%")    
+    end
   end
-
 
   private
 
   def post_params
-    params.require(:post).permit(:category,:description,:code,:user_id)
+    params.require(:post).permit(:category,:description,:code,:user_id,:search)
   end
 
   def set_post
