@@ -39,17 +39,18 @@
         <%end%>
       </div>
     </div>
+  </div>
+  <% else %>
+  <%end%>
+  <% if user_signed_in? %>
+  <div class="nav">
     <li class="nav-item new-post"> 
       <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "nav-link home-space" %>
     </li> 
   </div>
-  <% else %>
-  <%end%>
 </ul>
 
-<% if user_signed_in? %>
 <hr style="border: .5px solid#032533;" />
-
 <ul class="nav justify-content-center">
 	<% @categories.each do |category| %>
 	<li class="nav-item nav-space">
@@ -66,7 +67,6 @@
   </div>  
 </div>  
 <% end %>
-
 <%end%>
 
 <body>
