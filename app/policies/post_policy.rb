@@ -11,4 +11,5 @@ class PostPolicy < ApplicationPolicy
     admin_types.include?(user.type)
   end
 
+ 
 end

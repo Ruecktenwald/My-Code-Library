@@ -15,8 +15,9 @@
 		</div>
 	</div>
 	<br>
-
+	<% if @post.user_id == current_user.id %>
 	<%= link_to 'Edit', edit_post_path(@post) %>
+	<%end%>
 </div> 
 
 
