@@ -5,12 +5,15 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :set_categories
   
-  rescue_from Pundit::NotAuthorizedError do |exception|
-        redirect_to root_url, alert: exception.message
-      end
+   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
-  
   private
+
+  def user_not_authorized
+    flash[:alert] = "You are not authorized to perform this action."
+    redirect_to(root_path)
+  end
+  
   def set_categories
     @categories = Post::CATEGORIES.first(4)
   end
