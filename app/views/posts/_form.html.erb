@@ -12,8 +12,11 @@
 
 
 		<%= f.submit "Save", class: "btn btn-dark" %>
-		<%= link_to 'Delete', @post, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
-		<% end %>
-	</div>	
+		
+    <% if @post.id != nil %>
+    <%= link_to 'Delete', @post, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+    <% end %>
+  </div>	
 </div>
 
