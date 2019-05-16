@@ -1,9 +1,10 @@
 require 'rails_helper'
 
+
 describe "creation" do
 
   before do
-    @user = FactoryGirl.create(:user)
+    @user = build(:user)
     login_as(@user, :scope => :user)
   end
 
