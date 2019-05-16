@@ -14,7 +14,8 @@ class Post < ApplicationRecord
     "Heroku",
     "Git",
     "Typescript",
-    "React"
+    "React",
+    "Node"
   ]
   
   

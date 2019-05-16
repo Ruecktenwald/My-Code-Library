@@ -3,7 +3,12 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   describe 'navigate' do
-  
+    before do
+      @user = FactoryGirl.create(:user)
+      post = FactoryGirl.create(:post)
+      login_as(@user, :scope => :user)
+    end
+
     feature 'index' do
 
       it 'can be reached successfully' do
@@ -22,11 +27,6 @@ RSpec.describe Post, type: :model do
   feature 'creation' do
 
     before do
-
-      user = User.create(email: "test@test.com", password: "secret", 
-        password_confirmation: "secret", first_name: "Peter", last_name: "Wald")
-      login_as(user, :scope => :user)
-
       visit new_post_path
     end
     

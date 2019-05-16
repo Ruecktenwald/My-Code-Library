@@ -37,5 +37,6 @@ TO DO:
 - catchup on tests
 - change text:hover color
 - add back to previous page button on post show page
+- add 'allow library to be pubic' option with page
 - add user share pages 
 - add other users post to your own library
