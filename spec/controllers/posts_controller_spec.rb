@@ -1,5 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe PostsController, type: :controller do
+describe "navigation" do
+
+  
 
 end
