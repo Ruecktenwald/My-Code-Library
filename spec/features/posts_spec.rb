@@ -55,51 +55,58 @@ describe 'navigate' do
     end
   end
 
-  feature 'search bar'
+  feature 'search bar' do
 
-  it "can search post description with partial words" do
-    
-    post = FactoryGirl.create(:post, description: "How to update gem file")
-    visit root_path
-    fill_in :search, with: "ge"
-    click_button('find my code')
+    it "can search post description with partial words" do
 
-    expect(page).to have_content(/How to update gem file/)
+      post = FactoryGirl.create(:post, description: "How to update gem file")
+      visit root_path
+      fill_in :search, with: "ge"
+      click_button('find my code')
 
+      expect(page).to have_content(/How to update gem file/)
+    end
+
+    it "redirects to home page if search field is blank when search button clicked" do
+      visit root_path
+      click_button('find my code')
+
+      expect(page).to have_content(/Empty field!/)
+    end
+  end
+  feature 'creation' do
+
+    before do
+      visit new_post_path
+    end
+
+    it 'has a new form that can be reached' do
+      expect(page.status_code).to eq(200)
+    end
+
+    it 'of post can be saved from new form' do
+
+      fill_in 'post[description]', with: "How to install ruby gem."
+      fill_in 'post[code]', with: "bundle install"
+      select('Rails', :from => 'post[category]')
+
+      click_on "Save"
+
+      expect(page).to have_content("How to install ruby gem.")
+    end
+
+    it "will have a user associated with the post" do
+
+      fill_in 'post[description]', with: "How to install ruby gem."
+      fill_in 'post[code]', with: "update"
+      select('Rails', :from => 'post[category]')
+      click_on "Save"
+
+      expect(@user.posts.last.code).to eq("update")
+    end
   end
 end
 
-feature 'creation' do
 
-  before do
-    @user = FactoryGirl.create(:user)
-    login_as(@user, :scope => :user)
-    visit new_post_path
-  end
 
-  it 'has a new form that can be reached' do
-    expect(page.status_code).to eq(200)
-  end
 
-  it 'of post can be saved from new form' do
-
-    fill_in 'post[description]', with: "How to install ruby gem."
-    fill_in 'post[code]', with: "bundle install"
-    select('Rails', :from => 'post[category]')
-
-    click_on "Save"
-
-    expect(page).to have_content("How to install ruby gem.")
-  end
-
-  it "will have a user associated with the post" do
-
-    fill_in 'post[description]', with: "How to install ruby gem."
-    fill_in 'post[code]', with: "update"
-    select('Rails', :from => 'post[category]')
-    click_on "Save"
-
-    expect(@user.posts.last.code).to eq("update")
-  end
-
-end
