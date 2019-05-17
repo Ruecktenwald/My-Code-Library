@@ -15,74 +15,14 @@
 </head>
 
 <div id="flash_messages"><%= flash_messages(:close) %></div>
-<% if user_signed_in? %>
-<ul class="nav">
-	<li class=" nav-item">
-		<%= link_to "Home", root_path, class: "nav-link home-space"%>
-	</li>
 
-  <div class="nav">
-    <div class=" nav-item dropdown">
-      <div class=" home-space-menu">
-        <button type="button" class="btn nav-link  dropdown-toggle" data-toggle="dropdown">
-          Menu
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item ">	
-            <%= link_to 'New Post', new_post_path, class: "nav-link" %>
-          </a> 
-          <% if current_user.type == "AdminUser" %>
-          <a class="dropdown-item">	
-            <%= link_to 'Admin Dashboard', admin_users_path, class: "nav-link" %>
-          </a> 
-        </div>
-        <%end%>
-      </div>
-    </div>
-  </div>
-  <% else %>
-  <%end%>
-  <% if user_signed_in? %>
-  <div class="nav">
-    <li class="nav-item new-post"> 
-      <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "nav-link home-space" %>
-    </li> 
-  </div>
-</ul>
-
-<hr style="border: .5px solid#032533;" />
-<ul class="nav justify-content-center" >
-	<% @categories.each do |category| %>
-	<li class="nav-item nav-space">
-		<%= link_to "#{category}", category_posts_path(category), class: "nav-link" %>
-	</li>
-	<%end%>
-</ul>
-
-<%= form_tag(search_page_path, :method => "get") do %>  
-<div class="has-search middle" id="search-input">  
-  <%= search_field_tag :search, params[:search], placeholder: "Search", class: "search"%>  
-  <div class="input-group-btn"> 
-    <%= button_tag "find my code", :class => 'btn btn-red  btn-size',:name => nil %>  
-  </div>  
-</div>  
-<% end %>
-<%end%>
+<%= render 'layouts/nav' %>
+<%= render 'layouts/top_four' %>
+<%= render 'layouts/search_bar' %>
 
 <body>
 	<%= yield %>
 </body>
 
-<% if user_signed_in? %>
-<footer class="footer">
-	<hr style="border: .5px solid#032533;" />
-	<ul class="nav justify-content-center">
-		<% Post::CATEGORIES.each do |category| %>
-		<li class="nav-item nav-space">
-			<%= link_to "#{category}", category_posts_path(category), class: "nav-link" %>
-		</li>
-		<%end%>
-	</ul>
-</footer>
-<%end%>
+<%= render 'layouts/footer' %>
 </html>

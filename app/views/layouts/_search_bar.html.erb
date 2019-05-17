@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+<%= form_tag(search_page_path, :method => "get") do %>  
+<div class="has-search middle" id="search-input">  
+  <%= search_field_tag :search, params[:search], placeholder: "Search", class: "search"%>  
+  <div class="input-group-btn"> 
+    <%= button_tag "find my code", :class => 'btn btn-red  btn-size',:name => nil %>  
+  </div>  
+</div>  
+<% end %>
+<% end %>
