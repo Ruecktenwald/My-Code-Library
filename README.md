@@ -5,15 +5,15 @@
 X Posts -> language:Text description:text code:text 
 X User -> Devise
 X admin - Administrate
-
+X Pundit authentication
 
 ## Features:
 X require User signin - to CRUD
 X Code Language ReferenceGuides/Pages - create resource posts with code instruction for build tasks (RoR, Javascript)
 X user can create their own library of code reference
-X Pundit authentication
 
-- User can add their own category and choose their top four
+
+- User can add their own category and choose their top four which are shown above "My Code Library"
 - User can chose to allow their library to be public
 - User can add other users library to a side bar
 - User can add other users individual posts to their library
@@ -33,8 +33,7 @@ X Bootstrap -> formatting
 TO DO:
 - refactor
 - create view partials
-- redisgn views
-- catchup on tests
+- redesign views
 - change text:hover color
 - add back to previous page button on post show page
 - add 'allow library to be pubic' option with page
