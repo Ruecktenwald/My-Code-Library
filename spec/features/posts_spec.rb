@@ -3,10 +3,10 @@ require 'rails_helper'
 
 describe 'navigate' do
   before do
-    @user = build(:user)
-    @user2 = build(:user)
-    @post = build(:post)
-    @post2 = build(:second_post)
+    @user = FactoryGirl.create(:user)
+    @user2 = FactoryGirl.create(:user)
+    @post = FactoryGirl.create(:post)
+    @post2 = FactoryGirl.create(:second_post)
     login_as(@user, :scope => :user)
   end
 
@@ -17,21 +17,22 @@ describe 'navigate' do
       expect(page.status_code).to eq(200)
     end
 
-    it "has a title of 'How to install rspec' " do
+    it 'has a title of Posts' do
       visit posts_path
       expect(page).to have_content(/How to install rspec/)
     end
-  end 
-  feature 'navbar' do
+     
+    feature 'navbar' do
 
-    it "new_post_path can be reached from menu in nav" do
+     it "new_post_path can be reached from menu in nav" do
       visit root_path
       click_on('Menu')
       click_on('New Post')
 
-      expect(current_path).to eq("/posts/new")
+       expect(current_path).to eq("/posts/new")
     end
   end
+  end 
 
   feature 'User posts' do
     it 'can not be edited by other users' do
@@ -46,11 +47,10 @@ describe 'navigate' do
   end
 end
 
-
 feature 'creation' do
 
   before do
-    @user = build(:user)
+    @user = FactoryGirl.create(:user)
     login_as(@user, :scope => :user)
     visit new_post_path
   end

@@ -2,9 +2,9 @@ require 'rails_helper'
 
 describe "creation" do
   before do
-    @user = create(:user)
+    @user = FactoryGirl.create(:user)
     login_as(@user, :scope => :user)
-    @post = create(:post)
+    @post = FactoryGirl.create(:post)
   end
 
   it "can be created" do
