@@ -21,17 +21,26 @@ describe 'navigate' do
       visit posts_path
       expect(page).to have_content(/How to install rspec/)
     end
-     
-    feature 'navbar' do
 
-     it "new_post_path can be reached from menu in nav" do
+    it 'can reach show page of each category link' do
+
+      # refactor - fragile *************************
+      visit root_path
+      click_link('Heroku')
+
+      expect(current_path).to eq("/posts/category/Heroku")
+    end
+  end
+  
+  feature 'navbar' do
+
+    it "new_post_path can be reached from menu in nav" do
       visit root_path
       click_on('Menu')
       click_on('New Post')
 
-       expect(current_path).to eq("/posts/new")
+      expect(current_path).to eq("/posts/new")
     end
-  end
   end 
 
   feature 'User posts' do
@@ -39,11 +48,24 @@ describe 'navigate' do
       logout(@user, :scope => :user)
       login_as(@user2, :scope => :user)
 
-      visit "/posts/5/edit"
+      visit "/posts/300/edit"
 
       current_path.should == root_path
       expect(page).to have_content(/You are not authorized to perform this action./)
     end
+  end
+
+  feature 'search bar'
+
+  it "can search post description with partial words" do
+    
+    post = FactoryGirl.create(:post, description: "How to update gem file")
+    visit root_path
+    fill_in :search, with: "ge"
+    click_button('find my code')
+
+    expect(page).to have_content(/How to update gem file/)
+
   end
 end
 
@@ -59,7 +81,7 @@ feature 'creation' do
     expect(page.status_code).to eq(200)
   end
 
-  it 'can be created from new form' do
+  it 'of post can be saved from new form' do
 
     fill_in 'post[description]', with: "How to install ruby gem."
     fill_in 'post[code]', with: "bundle install"

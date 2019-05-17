@@ -12,7 +12,7 @@ FactoryGirl.define do
     description "How to call a function"
     code "()"
     user
-    id 5
+    id 300
   end
 
   factory :third_post, class: "Post" do
