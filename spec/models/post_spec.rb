@@ -11,17 +11,17 @@ describe "creation" do
     expect(@post).to be_valid
   end
 
-  it "cannot be created" do
+  it "of post cannot be created if category is empty" do
     @post.category = nil
     expect(@post).to_not be_valid
   end
 
-  it "cannot be created" do
+  it "of post cannot be created if description is empty" do
     @post.description = nil
     expect(@post).to_not be_valid
   end
 
-  it "cannot be created" do
+  it "of post cannot be created if code is empty" do
     @post.code = nil
     expect(@post).to_not be_valid
   end
