@@ -10,7 +10,7 @@
       <%= f.select :category,  Post::CATEGORIES, prompt: "Pick one"%><br><br>
       <%= f.submit "Save", class: "btn btn-dark" %>
       <% if @post.id != nil %>
-      <%= link_to 'Delete', @post, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Delete', @post, class: 'btn btn-red', method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
       <% end %>
     </div>
