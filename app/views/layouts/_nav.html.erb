@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
 <div class="header-div">
-  <h1 class="nav-header home-background">My Code Library</h1>
+  <h1 class="nav-header home-background"><%= link_to "My Code Library", root_path, class: "nav-link" %></h1>
 </div>
 <ul class="nav " id="nav_bar">
   <li class=" nav-item">

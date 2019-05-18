@@ -403,6 +403,10 @@ text-align: center;
 /***************************************
 Nav
 *****************************************/
+.top-bar {
+  background-color: #093145;
+  height: 10px; 
+}
 
 .navbar-fixed {
 top: 0;
@@ -444,6 +448,10 @@ background-color: #F2F3F4;
 color: #373D3F !important;
 }
 
+.title-link {
+  
+}
+
 .nav-link {
 color: #373D3F;
 }
@@ -462,6 +470,19 @@ margin-left: 35px;
 margin-top: 0px;
 }
 
+.top-four-background {
+ background: #292929;
+ margin: 10px; 
+}
+
+.nav-top-four {
+  color: #43ABC9;  
+}
+
+.nav-top-four:hover {
+  color: #F2F3F4; 
+  text-decoration: none; 
+}
 
 /***************************************
 index

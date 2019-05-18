@@ -1,9 +1,11 @@
 <% if user_signed_in? %>
-<ul class="nav justify-content-center" >
-  <% @categories.each do |category| %>
-  <li class="nav-item nav-space">
-    <%= link_to "#{category}", category_posts_path(category), class: "nav-link" %>
-  </li>
+<div class="top-four-background ">
+  <ul class="nav justify-content-center" >
+    <% @categories.each do |category| %>
+    <li class="nav-item nav-space">
+      <%= link_to "#{category}", category_posts_path(category), class: "nav-top-four" %>
+    </li>
+    <%end%>
+  </ul>
   <%end%>
-</ul>
-<%end%>
+</div>
