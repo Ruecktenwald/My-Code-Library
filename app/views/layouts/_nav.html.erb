@@ -1,13 +1,15 @@
 <% if user_signed_in? %>
-<ul class="nav">
+<h1 class="nav-header home-background">My Code Library</h1>
+
+<ul class="nav " id="nav_bar">
   <li class=" nav-item">
     <%= link_to "Home", root_path, class: "nav-link home-space"%>
   </li>
 
   <div class="nav">
     <div class=" nav-item dropdown">
-      <div class=" home-space-menu">
-        <button type="button" class="btn nav-link  dropdown-toggle" data-toggle="dropdown">
+      <div>
+        <button type="button" class="btn nav-link dropdown-toggle" data-toggle="dropdown">
           Menu
         </button>
         <div class="dropdown-menu">
@@ -32,7 +34,4 @@
     </li> 
   </div>
 </ul>
-
-<hr style="border: .5px solid#032533;" />
-
 <%end%>

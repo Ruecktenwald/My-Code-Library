@@ -1,7 +1,17 @@
-<div class="container home-background">
-	<div class=" jumbotron jumbotro-fluid home-background">
-		<h1 class="container middle text-center text-color">
-			My Code Library
-		</h1>
-	</div>
+
+<div class="container-fluid"> 
+
+  <% if user_signed_in? %>
+  <ul class="list-group container-fluid col-md-7">
+
+    <div class="myacordion">
+      <h2 class="homepage-cats nav-space label-style">Categories</h2>
+      <% Post::CATEGORIES.each do |category| %>
+      <li class="nav-item list-group-item nav-space">
+        <%= link_to "#{category}", category_posts_path(category), class: "nav-link text-center" %>
+      </li>
+      <%end%>
+    </div>
+  </ul>
+  <%end%>
 </div>

@@ -1,13 +1,13 @@
-<div class=" middle myaccordion">
-	<div class="">
+<div class="container-fluid">
+	<div class="middle">
 		<%= form_for @post do |f| %>
 		
 		<%= render "shared/errors", object: @post %>
-		<%= f.label :description %><br>
-		<%= f.text_field :description, size: "60x12" %><br><br>
+		<%= f.label :description, "Description:"%><br>
+		<%= f.text_field :description, size: "80x12" %><br><br>
 
-		<%= f.label :code %> <br>
-		<%= f.text_area :code, size: "60x10" %><br><br>
+		<%= f.label :code, "Code:" %> <br>
+		<%= f.text_area :code, size: "80x10" %><br><br>
 		<%= f.select :category,  Post::CATEGORIES, prompt: "Pick one"%><br><br>
 
 
