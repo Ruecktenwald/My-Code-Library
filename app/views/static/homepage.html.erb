@@ -1,17 +1,15 @@
-
-<div class="container-fluid"> 
-
-  <% if user_signed_in? %>
-  <ul class="list-group container-fluid col-md-7">
-
-    <div class="myacordion">
-      <h2 class="homepage-cats nav-space label-style">Categories</h2>
-      <% Post::CATEGORIES.each do |category| %>
-      <li class="nav-item list-group-item nav-space">
-        <%= link_to "#{category}", category_posts_path(category), class: "nav-link text-center" %>
-      </li>
-      <%end%>
+<% Post::CATEGORIES.each do |category| %>
+<div class="">
+  <div class="myaccordion">
+    <div class="card ">
+      <div class="card-header middle">
+        <h2 class="mb-0 ">
+          <button class=" btn btn-link">
+            <%= link_to "#{category}", category_posts_path(category), class: "nav-link text-center" %>
+          </button>
+        </h2>
+      </div>
     </div>
-  </ul>
-  <%end%>
+  </div>
 </div>
+<%end%>

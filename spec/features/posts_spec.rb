@@ -22,7 +22,7 @@ describe 'navigate' do
       expect(page).to have_content(/How to install rspec/)
     end
 
-    it 'can reach show page of each category link' do
+    xit 'can reach show page of each category link' do
 
       # refactor - fragile *************************
       visit root_path
