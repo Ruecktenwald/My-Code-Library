@@ -9,21 +9,19 @@
 
   <div class="nav">
     <div class=" nav-item dropdown">
-      <div>
-        <div class=" nav-link dropdown-toggle" data-toggle="dropdown">
-          Menu
-        </div>
-        <div class="dropdown-menu">
-          <a class="dropdown-item ">  
-            <%= link_to 'New Post', new_post_path, class: "nav-link" %>
-          </a> 
-          <% if current_user.type == "AdminUser" %>
-          <a class="dropdown-item"> 
-            <%= link_to 'Admin Dashboard', admin_users_path, class: "nav-link" %>
-          </a> 
-        </div>
-        <%end%>
+      <div class=" nav-link dropdown-toggle" data-toggle="dropdown">
+        Menu
       </div>
+      <div class="dropdown-menu">
+        <a class="dropdown-item ">  
+          <%= link_to 'New Post', new_post_path, class: "nav-link" %>
+        </a> 
+        <% if current_user.type == "AdminUser" %>
+        <a class="dropdown-item"> 
+          <%= link_to 'Admin Dashboard', admin_users_path, class: "nav-link" %>
+        </a> 
+      </div>
+      <%end%>
     </div>
   </div>
   <% else %>
