@@ -404,7 +404,7 @@ text-align: center;
 Nav
 *****************************************/
 .top-bar {
-  background-color: #093145;
+  background-color: #292929;
   height: 10px; 
 }
 
@@ -413,7 +413,6 @@ top: 0;
 z-index: 100;
 position: fixed;
 width: 100%;
-
 }
 
 #nav_bar {
@@ -427,9 +426,14 @@ background-color: hsla( 210°, 8%, 95%, .9);
 .nav-header {
 text-align: center;
 font-size: 18;
-color: #093145;
+color: #373D3F;
 margin: 0px;
 padding: 4px;
+}
+
+.nav-header:hover {
+  color: #373D3F;
+  text-decoration: none;
 }
 
 .home-space {
@@ -472,15 +476,15 @@ margin-top: 0px;
 
 .top-four-background {
  background: #292929;
- margin: 10px; 
+ margin: 10px 50px 10px 50px; 
 }
 
 .nav-top-four {
-  color: #43ABC9;  
+  color: #F2F3F4;  
 }
 
 .nav-top-four:hover {
-  color: #F2F3F4; 
+  color: #A7B0B2; 
   text-decoration: none; 
 }
 
@@ -555,12 +559,12 @@ text-decoration: none;
 }
 
 .code-background {
-background-color: #222233;
+background-color: #F2F3F4;
 }
 
 .code-background-show {
 max-width: 600px;
-background-color: #093145;
+background-color: #F2F3F4;
 }
 
 .container {
@@ -568,7 +572,7 @@ background-color: #F2F3F4;
 }
 
 .text-color {
-color: #F2F3F4;
+color: #093145;
 }
 
 .label-style{
@@ -578,8 +582,8 @@ font-size: 20px;
 }
 
 .label-style-btm {
-color: #032533;
-font-size: 40px;
+color: #3C6478;
+font-size: 30px;
 }
 
 .form-margin {
@@ -651,10 +655,35 @@ border-color: #2f080e #2f080e hsl(351, 68%, 1.5%);
 color: #fff !important;
 text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.62);
 }
+.btn-red:hover {
+background-color: hsl(351, 68%, 5%) !important;
+background-repeat: repeat-x;
+background-image: -o-linear-gradient(top, #CD594A, #2f080e);
+background-image: linear-gradient(#CD594A, #2f080e);
+border-color: #2f080e #2f080e hsl(351, 68%, 1.5%);
+color: #fff !important;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.62);
+}
 
+.btn-dark {
+background-color: hsl(351, 68%, 5%) !important;
+background-repeat: repeat-x;
+background-image: -o-linear-gradient(top, #292929, #2f080e);
+background-image: linear-gradient(#292929, #2f080e);
+border-color: #2f080e #2f080e hsl(351, 68%, 1.5%);
+color: #fff !important;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.62);
+}
 
-
-
+.btn-dark:hover {
+background-color: hsl(351, 68%, 5%) !important;
+background-repeat: repeat-x;
+background-image: -o-linear-gradient(top, #707C80, #2f080e);
+background-image: linear-gradient(#707C80, #2f080e);
+border-color: #2f080e #2f080e hsl(351, 68%, 1.5%);
+color: #fff !important;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.62);
+}
 
 
 
