@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   namespace :admin do
     resources :users
     resources :posts
@@ -11,7 +12,6 @@ Rails.application.routes.draw do
   get "posts/category/:category" => 'posts#index', as: 'category_posts'
   resources :posts
   devise_for :users, :controllers => { registrations: 'registrations' }
-
+  get 'users/profile/:name' => 'users#show', as: 'users_profile'
   root to: 'static#homepage'
-
 end

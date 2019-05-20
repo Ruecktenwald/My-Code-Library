@@ -1,15 +1,15 @@
 <% Post::CATEGORIES.each do |category| %>
-<div class="">
-  <div class="myaccordion">
-    <div class="card ">
-      <div class="card-header middle">
-        <h2 class="mb-0 ">
-          <button class=" btn btn-link">
-            <%= link_to "#{category}", category_posts_path(category), class: "nav-link text-center" %>
-          </button>
-        </h2>
+  <div class="">
+    <div class="myaccordion">
+      <div class="card ">
+        <div class="card-header middle">
+          <h2 class="mb-0 ">
+            <button class=" btn btn-link">
+              <%= link_to "#{category}", category_posts_path(category), class: "nav-link text-center" %>
+            </button>
+          </h2>
+        </div>
       </div>
     </div>
   </div>
-</div>
 <%end%>
