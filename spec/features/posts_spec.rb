@@ -22,9 +22,9 @@ describe 'navigate' do
       expect(page).to have_content(/How to install rspec/)
     end
 
-    xit 'can reach show page of each category link' do
+    it 'can reach show page of each category link' do
+      pending("fragile - currently broken")
 
-      # refactor - fragile *************************
       visit root_path
       click_link('Heroku')
 
@@ -33,8 +33,10 @@ describe 'navigate' do
   end
   
   feature 'navbar' do
-    # refactor - fragile *************************
-    xit "new_post_path can be reached from menu in nav" do
+    
+    it "new_post_path can be reached from menu in nav" do
+      pending("fragile - currently broken")
+
       visit root_path
       click_on('Menu')
       click_on('New Post')
