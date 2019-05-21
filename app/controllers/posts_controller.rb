@@ -45,6 +45,14 @@ class PostsController < ApplicationController
     redirect_to root_path, notice: 'Your post was deleted successfully'
   end
 
+  def recent
+    if params[:category]
+      @posts = Post.where(category: params[:category]).order(created_at: :desc)
+    else 
+      @posts = Post.all.order(created_at: :desc)
+    end
+  end
+
   def search  
     if params[:search].blank?  
       redirect_to(root_path, alert: "Empty field!") and return  
@@ -57,7 +65,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:category,:description,:code,:user_id,:search)
+    params.require(:post).permit(:category,:description,:code,:user_id)
   end
 
   def set_post
