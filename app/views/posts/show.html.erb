@@ -16,8 +16,10 @@
 	</div>
 	<br>
 	<% if @post.user_id == current_user.id %>
-	<%= link_to 'Edit', edit_post_path(@post), class: "nav-link" %>
-	<%end%>
+  <div class="middle">
+   <%= link_to 'Edit', edit_post_path(@post), class: "edit-btn btn" %>
+   <%end%>
+ </div>
 </div> 
 
 
