@@ -4,6 +4,9 @@ class PostPolicy < ApplicationPolicy
     record.user_id == user.id || admin?   
   end
 
+  def destroy?
+    record.user_id == user.id || admin? 
+  end
 
   private
 

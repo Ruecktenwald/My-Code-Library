@@ -15,7 +15,7 @@
 		</div>
 	</div>
 	<br>
-	<% if @post.user_id == current_user.id %>
+	<% if policy(@post).update? %>
   <div class="middle">
    <%= link_to 'Edit', edit_post_path(@post), class: "edit-btn btn" %>
    <%end%>
