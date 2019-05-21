@@ -1,7 +1,8 @@
-<% if user_signed_in? %>
-  <div class="header-div">
-    <h1 class="nav-header home-background"><%= link_to "My Code Library", root_path, class: "nav-header" %></h1>
-  </div>
+<div class="header-div">
+  <h1 class="nav-header home-background"><%= link_to "My Code Library", root_path, class: "nav-header" %></h1>
+</div>
+
+<% if user_signed_in? %>  
   <ul class="nav " id="nav_bar">
     <li class=" nav-item">
       <%= link_to "Home", root_path, class: "nav-link home-space"%>
