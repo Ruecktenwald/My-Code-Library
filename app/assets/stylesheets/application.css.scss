@@ -404,8 +404,8 @@ text-align: center;
 Nav
 *****************************************/
 .top-bar {
-  background-color: #292929;
-  height: 30px; 
+background-color: #292929;
+height: 30px; 
 }
 
 .navbar-fixed {
@@ -432,8 +432,8 @@ padding: 4px;
 }
 
 .nav-header:hover {
-  color: #373D3F;
-  text-decoration: none;
+color: #373D3F;
+text-decoration: none;
 }
 
 .home-space {
@@ -445,7 +445,7 @@ background-color: #F2F3F4;
 }
 
 .header-div {
-  background-color: #EBC944;
+background-color: #EBC944;
 }
 
 .menu-color {
@@ -453,19 +453,19 @@ color: #373D3F !important;
 }
 
 button {
-    outline-style: none;
-    border: none;
-    outline: none;
-    background: none;
+outline-style: none;
+border: none;
+outline: none;
+background: none;
 }
 
 button:focus {
-    border: none;
-    outline: 0 !important;
+border: none;
+outline: 0 !important;
 }
 
 .title-link {
-  
+
 }
 
 .nav-link {
@@ -487,17 +487,17 @@ margin-top: 0px;
 }
 
 .top-four-background {
- background: #292929;
- margin: 10px 50px 10px 50px; 
+background: #292929;
+margin: 10px 50px 10px 50px; 
 }
 
 .nav-top-four {
-  color: #F2F3F4;  
+color: #F2F3F4;  
 }
 
 .nav-top-four:hover {
-  color: #A7B0B2; 
-  text-decoration: none; 
+color: #A7B0B2; 
+text-decoration: none; 
 }
 
 /***************************************
@@ -609,12 +609,14 @@ box-shadow: 0 0 1px rgba(0,0,0,0.1);
 }
 
 .pos-rel {
-  position: relative;
+position: relative;
 }
 
 .list-group-item {
-  background-color: #F2F3F4;
+background-color: #F2F3F4;
 }
+
+
 
 /***************************************
 flashes
@@ -698,7 +700,25 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.62);
 }
 
 
+.edit-btn {
+background-color: hsl(351, 68%, 5%) !important;
+background-repeat: repeat-x;
+background-image: -o-linear-gradient(top, #9A2617, #2f080e);
+background-image: linear-gradient(#9A2617, #2f080e);
+border-color: #2f080e #2f080e hsl(351, 68%, 1.5%);
+color: #fff !important;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.62);
+}
 
+.edit-btn:hover {
+background-color: hsl(351, 68%, 5%) !important;
+background-repeat: repeat-x;
+background-image: -o-linear-gradient(top, #CD594A, #2f080e);
+background-image: linear-gradient(#CD594A, #2f080e);
+border-color: #2f080e #2f080e hsl(351, 68%, 1.5%);
+color: #fff !important;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.62);
+}
 
 
 
