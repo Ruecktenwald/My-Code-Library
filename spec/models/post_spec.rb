@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe "creation" do
   before do
+    @category = FactoryGirl.create(:category)
     @user = FactoryGirl.create(:user)
     login_as(@user, :scope => :user)
     @post = FactoryGirl.create(:post)

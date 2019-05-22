@@ -4,6 +4,7 @@
 ## Models
 X Posts -> language:Text description:text code:text 
 X User -> Devise
+X Category - > name:string
 X admin - Administrate
 X Pundit authentication
 
@@ -14,6 +15,7 @@ X user can create their own library of code reference
 
 
 - User can add their own category and choose their top four which are shown above "My Code Library"
+- User can create their own Category set
 - User can chose to allow their library to be public
 - User can add other users library to a side bar
 - User can add other users individual posts to their library

@@ -37,7 +37,7 @@ class PostsController < ApplicationController
     end
   end
 
-  def show	
+  def show
   end
 
   def destroy
@@ -65,7 +65,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:category,:description,:code,:user_id)
+    params.require(:post).permit(:description, :code, :user_id, :category_id)
   end
 
   def set_post

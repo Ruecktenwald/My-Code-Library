@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'search' => 'posts#search', :as => 'search_page'
   get "posts/category/:category" => 'posts#index', as: 'category_posts'
   resources :posts
+  resources :categories
   devise_for :users, :controllers => { registrations: 'registrations' }
   get 'users/profile/:name' => 'users#show', as: 'users_profile'
   root to: 'static#homepage'

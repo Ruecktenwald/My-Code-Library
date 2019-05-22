@@ -1,14 +1,14 @@
 FactoryGirl.define do
   
   factory :post do
-    category "Rails"  
+    category_id 1 
     description "How to install rspec"
     code "rails g rspec:install"
     user
   end
 
   factory :second_post, class: "Post" do
-    category "Javascript"  
+    category_id 1  
     description "How to call a function"
     code "()"
     user
@@ -16,7 +16,7 @@ FactoryGirl.define do
   end
 
   factory :third_post, class: "Post" do
-    category "Javascript"  
+    category_id 1
     description "How to call a function"
     code "()"
     admin_user

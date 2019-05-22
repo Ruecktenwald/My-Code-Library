@@ -3,6 +3,7 @@ require 'rails_helper'
 
 describe 'navigate' do
   before do
+    @category = FactoryGirl.create(:category)
     @user = FactoryGirl.create(:user)
     @user2 = FactoryGirl.create(:user)
     @post = FactoryGirl.create(:post)
@@ -35,8 +36,7 @@ describe 'navigate' do
   feature 'navbar' do
     
     it "new_post_path can be reached from menu in nav" do
-      pending("fragile - currently broken")
-
+     
       visit root_path
       click_on('Menu')
       click_on('New Post')
@@ -90,7 +90,7 @@ describe 'navigate' do
 
       fill_in 'post[description]', with: "How to install ruby gem."
       fill_in 'post[code]', with: "bundle install"
-      select('Rails', :from => 'post[category]')
+      select('Rails', :from => 'post[category_id]')
 
       click_on "Save"
 
@@ -101,7 +101,7 @@ describe 'navigate' do
 
       fill_in 'post[description]', with: "How to install ruby gem."
       fill_in 'post[code]', with: "update"
-      select('Rails', :from => 'post[category]')
+      select('Rails', :from => 'post[category_id]')
       click_on "Save"
 
       expect(@user.posts.last.code).to eq("update")

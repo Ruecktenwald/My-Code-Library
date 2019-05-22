@@ -7,12 +7,13 @@
       <%= f.text_field :description, size: "150x12", class: "code-background-show text-color container-fluid" %><br><br>
       <%= f.label :code, "Code:" %> <br>
       <%= f.text_area :code, size: "150x10", class: "code-background-show container-fluid text-color" %><br><br>
-      <%= f.select :category,  Post::CATEGORIES, prompt: "Pick one"%><br><br>
+     <%= f.select :category_id, options_for_select(@categories.collect { | c | [c.name, c.id] }, @categories.ids), {}, {} %><br><br>
+     <br><br>
       <%= f.submit "Save", class: "btn btn-dark" %>
-      <% if @post.id != nil %>
+      <% if @post.id? %>
       <%= link_to 'Delete', @post, class: 'btn btn-red', method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
-      <% end %>
+      <% end %>   
     </div>
   </div>	
 </div>
