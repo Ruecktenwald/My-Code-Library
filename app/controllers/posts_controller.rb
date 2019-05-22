@@ -2,10 +2,9 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index 
+    @posts = Post.order(created_at: :desc)
     if params[:category]
-      @posts = Post.where(category: params[:category]).posts_by current_user
-    else 
-      @posts = Post.all
+      @posts = @posts.where(category: params[:category])
     end
   end
 
