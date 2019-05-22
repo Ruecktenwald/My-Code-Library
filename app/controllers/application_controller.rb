@@ -15,6 +15,6 @@ class ApplicationController < ActionController::Base
   end
 
   def set_categories
-    @categories = Category.where(user_id: current_user.id)
+    @categories = Category.where(user_id: current_user)
   end
 end
