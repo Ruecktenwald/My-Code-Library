@@ -3,6 +3,7 @@
     <%= @category.name %> 
   </div>
   <div class="middle">
-   <%= link_to 'Edit', category_path(@category), class: "edit-btn btn" %>
+   <%= link_to 'Edit', edit_category_path(@category), class: "btn-dark btn" %>
+   <%= link_to 'Delete', @post, class: 'btn btn-red', method: :delete, data: { confirm: 'Are you sure?' } %>
  </div>
 </div> 

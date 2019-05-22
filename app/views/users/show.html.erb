@@ -1,9 +1,8 @@
 <section class="container">
   <h1 ><%= current_user.first_name%>'s Profile:</h1>
   
-  
   <div class="">  
-    <%= link_to "All Categories", categories_path, class: "nav-link" %>
+    <%= link_to "All My Categories", categories_path, class: "nav-link" %>
   </div>
   <div>
     <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link"  %>
