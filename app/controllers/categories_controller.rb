@@ -1,8 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
-  def index
-     @categories = Category.where(user_id: current_user.id)
+  def index   
   end
 
   def show
