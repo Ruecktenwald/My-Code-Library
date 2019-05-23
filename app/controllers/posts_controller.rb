@@ -57,7 +57,8 @@ class PostsController < ApplicationController
       redirect_to(root_path, alert: "Empty field!") and return  
     else
       @parameter = params[:search].downcase  
-      @results = Post.where("lower(description) LIKE :search", search: "%#{@parameter}%").order(created_at: :desc)    
+      @post_results = Post.where("lower(description) LIKE :search", search: "%#{@parameter}%").order(created_at: :desc)
+      @category_results = @categories.where("lower(name) LIKE :search", search: "%#{@parameter}%").order(created_at: :desc)    
     end
   end
 
