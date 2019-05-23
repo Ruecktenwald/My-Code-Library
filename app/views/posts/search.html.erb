@@ -27,6 +27,9 @@
           <button class=" btn btn-link text-color">
             <%= link_to "#{result.name}", category_posts_path(result), class: "nav-link posts" %><br>  
           </button>
+          <div class="label-style-category">
+            <%=pluralize(result.posts.count, 'post')%>
+          </div>
         </h2>
       </div>
     </div>
