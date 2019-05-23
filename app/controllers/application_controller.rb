@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     redirect_to(root_path)
   end
 
-  def set_categories
+  def set_categories   
     @categories = Category.where(user_id: current_user)
   end
 end

@@ -1,6 +1,7 @@
 class StaticController < ApplicationController
 	
-  def homepage   
+  def homepage
+    @sorted_categories = @categories.order(name: :asc)   
 	end
 
 end
