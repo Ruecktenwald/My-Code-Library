@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  
-  namespace :admin do
-    resources :users
-    resources :posts
-    resources :admin_users
 
+  namespace :admin do
+    resources :admin_users
+    resources :users
+    resources :categories
+    resources :posts
+    
     root to: "users#index"
   end
 
