@@ -1,3 +1,4 @@
+<h1 class="middle label-style-btm" >My Categories</h1>
 <% @sorted_categories.each do |category| %>
 <% if current_user.id == category.user_id %>
 <div class="">
@@ -13,7 +14,7 @@
             <%=pluralize(category.posts.count, 'post')%>
           </div>
         </h2>
-        
+
       </div>
     </div>
   </div>
