@@ -33,6 +33,7 @@ class CategoriesController < ApplicationController
       render :edit
     end
   end
+
   def destroy
     if @category.delete
     redirect_to root_path, notice: 'Your category was deleted successfully'
@@ -40,7 +41,6 @@ class CategoriesController < ApplicationController
       render :show, alert: 'Your category could not be deleted'
     end
   end
-
 
   private
 
