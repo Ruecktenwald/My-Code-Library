@@ -1,7 +1,8 @@
 <div class="header-div">
   <h1 class="nav-header home-background"><%= link_to "My Code Library", root_path, class: "nav-header" %></h1>
 </div>
-<div id ="mob">
+
+<div class="mob-nav" id ="mob">
   <% if user_signed_in? %>  
   <ul class="nav " id="nav_bar">
     <li class=" nav-item">
@@ -14,10 +15,10 @@
           Menu
         </button>
         <div class="dropdown-menu">
-          <a class="dropdown-item "> 
+          <a class="dropdown-item " > 
             <%= link_to "My Profile", users_profile_path(current_user), class: "nav-link" %>
           </a> 
-          <a class="dropdown-item ">  
+          <a class="dropdown-item" id="nav_bind">  
             <%= link_to 'New Category', new_category_path, class: "nav-link" %>
           </a>
           <a class="dropdown-item ">  
@@ -44,7 +45,7 @@
 </div>
 <%end%>
 
-<div id= "web">
+<div class="web-nav" id= "web ">
   <% if user_signed_in? %>  
   <ul class="nav " id="nav_bar_web">
     <li class=" nav-item">

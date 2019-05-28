@@ -408,6 +408,25 @@ background-color: #292929;
 height: 30px; 
 }
 
+@media only screen and (max-width: 754px) {
+  .mob-nav {
+    display: inline;
+  } 
+  .web-nav {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 755px) {
+  .mob-nav {
+    display: none;
+  } 
+  .web-nav {
+    display: inline;
+  }
+}
+
+
 .navbar-fixed-web {
 top: 0;
 z-index: 100;
@@ -609,7 +628,7 @@ font-size: 20px;
 }
 
 .label-style-category {
-  color: #8C3503;
+color: #8C3503;
 font-weight: bold;
 font-size: 10px;
 }
@@ -740,6 +759,9 @@ border-color: #2f080e #2f080e hsl(351, 68%, 1.5%);
 color: #fff !important;
 text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.62);
 }
+
+
+
 
 
 

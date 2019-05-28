@@ -40,7 +40,7 @@ class PostsController < ApplicationController
 
   def destroy
     if @post.destroy
-    redirect_to root_path, notice: 'Your post was deleted successfully'
+      redirect_to root_path, notice: 'Your post was deleted successfully'
     else
       render post_path
     end
