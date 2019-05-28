@@ -408,6 +408,21 @@ background-color: #292929;
 height: 30px; 
 }
 
+.navbar-fixed-web {
+top: 0;
+z-index: 100;
+position: fixed;
+width: 100%;
+}
+
+#nav_bar_web {
+border: 0;
+border-radius: 0px;
+margin-bottom: 0;
+height: 40px;
+background-color: hsla( 210°, 8%, 95%, .9);
+}
+
 .navbar-fixed {
 top: 0;
 z-index: 100;
