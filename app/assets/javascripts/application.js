@@ -26,27 +26,6 @@ $(document).ready(function() {
   });
 });
 
-$(window).resize(function() {
-  if ($(window).width() < 755) {
-    $("#web").hide();
-    $("#mob").show();
-  }
-  else{
-    $("#web").show();
-    $("#mob").hide();
-  }
-});
-
-$(window).load(function() {
-  if ($(window).width() < 755) {
-    $("#web").hide();
-    $("#mob").show();
-  }
-  else{
-    $("#web").show();
-    $("#mob").hide();
-  }
-});
 
 
 
