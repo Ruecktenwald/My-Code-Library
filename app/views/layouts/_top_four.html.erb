@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
 <div class="top-four-background ">
-  <div class="middle"><%= link_to "TOP FOUR", top_four_path(@top_four_categories), class: "label-style-top-four" %></div>
+  <div class="middle"><%= link_to "TOP FOUR", top_four_path(@top_four_categories), class: "label-style-top-four letter-space" %></div>
   <ul class="nav justify-content-center" >
     <% @top_four_categories.limit(4).each do |category| %>
     <li class="nav-item nav-space">
