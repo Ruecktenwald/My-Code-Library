@@ -7,6 +7,9 @@ class CategoriesController < ApplicationController
   def show
   end
 
+  def top_four
+  end
+
   def new
     @category = Category.new
   end

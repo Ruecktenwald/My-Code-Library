@@ -11,8 +11,8 @@ Rails.application.routes.draw do
 
   get 'posts/recent' => 'posts#recent', :as => 'most_recent'
   get 'search' => 'posts#search', :as => 'search_page'
-  get "category/posts/:category" => 'posts#index', as: 'category_posts'
-
+  get 'category/posts/:category' => 'posts#index', as: 'category_posts'
+  get 'categories/:top-four' => 'categories#top_four', as: 'top-four'
   resources :categories
   resources :posts
 

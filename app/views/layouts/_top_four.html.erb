@@ -1,8 +1,8 @@
 <% if user_signed_in? %>
 <div class="top-four-background ">
-  <div class="label-style-top-four">Top Four:</div>
+  <div class="label-style-top-four"><%= link_to "Top Four:", top_four_path(@top_four_categories), class: "label-style-top-four" %></div>
   <ul class="nav justify-content-center" >
-    <% @categories.where(status: 1).limit(4).each do |category| %>
+    <% @top_four_categories.limit(4).each do |category| %>
     <li class="nav-item nav-space">
       <%= link_to "#{category.name}", category_posts_path(category), class: "nav-top-four" %>
     </li>
