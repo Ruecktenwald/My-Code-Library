@@ -16,7 +16,6 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
-    @category.name = params[:category][:name].capitalize
     @category.user_id = current_user.id
     
     if @category.save 
@@ -40,7 +39,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     if @category.destroy
-      redirect_to categories_path, notice: 'Your category was deleted successfully'
+      redirect_to root_path, notice: 'Your category was deleted successfully'
     else
       render :show, alert: 'Your category could not be deleted'
     end
