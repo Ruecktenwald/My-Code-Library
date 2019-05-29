@@ -7,13 +7,13 @@
       <%= f.text_field :name, size: "80x12", class: "code-background-show text-color container-fluid" %><br><br>
       <%= f.select :status, options_for_select([["Regular", "regular"], ["Top Four", "top_four"]], @category.status) %>
       
-     <br><br>
+      <br><br>
       <%= f.submit "Save", class: "btn btn-dark" %>
       <% if @category.id? %>
       <%= link_to 'Delete', @category, class: 'btn btn-red', method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
       <% end %>
-    
+      
     </div>
   </div>  
 </div>

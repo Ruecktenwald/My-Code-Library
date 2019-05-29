@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     if @category.destroy
-    redirect_to categories_path, notice: 'Your category was deleted successfully'
+      redirect_to categories_path, notice: 'Your category was deleted successfully'
     else
       render :show, alert: 'Your category could not be deleted'
     end
