@@ -4,7 +4,7 @@
     <%= render "shared/errors", object: @category %>
     <div>
       <%= f.label :name, "Name:"%><br>
-      <%= f.text_field :name, size: "80x12", class: "code-background-show text-color container-fluid" %><br><br>
+      <%= f.text_field :name, style: 'text-transform: capitalize;', size: "80x12", class: " code-background-show text-color container-fluid" %><br><br>
       <%= f.select :status, options_for_select([["Regular", "regular"], ["Top Four", "top_four"]], @category.status) %>
       
       <br><br>
