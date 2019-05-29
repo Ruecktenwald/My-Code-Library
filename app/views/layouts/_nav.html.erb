@@ -60,6 +60,9 @@
           <a class="dropdown-item "> 
             <%= link_to "My Profile", users_profile_path(current_user), class: "nav-link" %>
           </a> 
+          <a class="dropdown-item">  
+            <%= link_to "All My Categories", categories_path, class: "nav-link" %>
+          </a>
 
           <% if current_user.type == "AdminUser" %>
           <a class="dropdown-item"> 
