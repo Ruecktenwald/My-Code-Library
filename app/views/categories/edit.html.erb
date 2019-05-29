@@ -1,21 +1,3 @@
 <h1 class="middle label-style-btm" >Edit Category</h1>
 
-<div class="container-fluid">
-  <div class="middle">
-    <%= form_for @category do |f| %>
-    <%= render "shared/errors", object: @category %>
-    <div>
-      <%= f.label :name, "Description:" %><br>
-      <%= f.text_field :name, size: "80x12", class: "code-background-show text-color container-fluid" %><br><br>
-      
-     <br><br>
-      <%= f.submit "Save", class: "btn btn-dark" %>
-      <% if @category.id? %>
-      <%= link_to 'Delete', @category, class: 'btn btn-red', method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end %>
-      <% end %>
-    
-    </div>
-  </div>  
-</div>
-
+<%= render "form" %>
