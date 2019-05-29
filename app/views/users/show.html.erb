@@ -5,6 +5,9 @@
     <%= link_to "All My Categories", categories_path, class: "nav-link" %>
   </div>
   <div>
+    <%= link_to "Top Four Categories", top_four_path(@top_four_categories), class: "nav-link"  %>
+  </div>
+  <div>
     <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link"  %>
   </div>
 </section>
