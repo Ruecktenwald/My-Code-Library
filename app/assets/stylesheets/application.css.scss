@@ -522,11 +522,14 @@ margin-top: 0px;
 
 .top-four-background {
 background: #292929;
-margin: 10px 50px 10px 50px; 
+margin: 10px 50px 10px 50px;
+border-radius: 8px; 
 }
 
 .nav-top-four {
-color: #F2F3F4;  
+color: #F2F3F4;
+margin-right: 15px;
+margin-left: 15px; 
 }
 
 .nav-top-four:hover {
@@ -704,6 +707,7 @@ margin: 50px;
 }
 .search{
 width: 300px;
+border-radius: 5px; 
 }
 
 .has-search {
@@ -711,6 +715,7 @@ margin-bottom: 15px;
 }
 
 .btn-size {
+border-radius: 5px; 
 width: 150px;
 height: 31px;
 margin-top: 5px;

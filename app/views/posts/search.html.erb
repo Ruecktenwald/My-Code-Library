@@ -22,7 +22,7 @@
   <div class="myaccordion">
     <div class="card">
       <div class="card-header ">
-        <div class="label-style-category">Category</div>
+        <div class="label-style-category"><%= link_to "Category", category_path(result), class: "label-style-top-four" %></div>
         <h2 class="mb-0 middle">
           <button class=" btn btn-link text-color">
             <%= link_to "#{result.name}", category_posts_path(result), class: "nav-link posts" %><br>  
