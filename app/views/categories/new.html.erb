@@ -5,10 +5,9 @@
     <%= form_for @category do |f| %>
     <%= render "shared/errors", object: @category %>
     <div>
-      <%= f.label :name, "Description:" %><br>
+      <%= f.label :name, "Name:" %><br>
       <%= f.text_field :name, size: "80x12", class: "code-background-show text-color container-fluid" %><br><br>
       
-
      <br><br>
       <%= f.submit "Save", class: "btn btn-dark" %>
       <% if @category.id? %>
