@@ -9,6 +9,4 @@ class Category < ApplicationRecord
   def uppercase_category
     self.name.capitalize!
   end
-
-  
 end
