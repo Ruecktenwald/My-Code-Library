@@ -18,7 +18,9 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     @category.user_id = current_user.id
     
-    if @category.save 
+    if already_four? && @category.status == "top_four"
+      redirect_to(root_path, alert: "#{@category.name.capitalize} was not saved. You already have four top categories. Please remove one if you would like to add a new top category.")
+    elsif @category.save 
       redirect_to(@category, :flash => [:success])
     else
       render :new
@@ -54,4 +56,10 @@ class CategoriesController < ApplicationController
   def set_category
     @category = Category.find(params[:id])
   end
+end
+
+private
+
+def already_four?
+ @categories.where(status: 1).count >= 4   
 end
