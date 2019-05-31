@@ -1,11 +1,11 @@
 class PostPolicy < ApplicationPolicy
 
   def update?
-    record.category_id == user.id || admin?   
+    record.user_id == user.id || admin?   
   end
 
   def destroy?
-    record.category_id == user.id || admin? 
+    record.user_id == user.id || admin? 
   end
 
   private
