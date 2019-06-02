@@ -26,7 +26,10 @@ gem 'pundit', '~> 2.0', '>= 2.0.1'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
-  gem 'capybara', '~> 3.18'
+  #gem 'capybara', '~> 3.18'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
   gem 'database_cleaner', '~> 1.7'
   gem 'factory_girl_rails', '~> 4.9'
   gem 'pry-rails', '~> 0.3.4'

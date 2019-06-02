@@ -22,4 +22,8 @@ RSpec.configure do |config|
   config.include Rails.application.routes.url_helpers
   config.include FactoryGirl::Syntax::Methods
   config.include Warden::Test::Helpers
+  config.before(:each, type: :feature) do
+    # Note (Mike Coutermarsh): Make browser huge so that no content is hidden during tests
+    #Capybara.current_session.driver.browser.manage.window.resize_to(2_500, 2_500)
+  end
 end

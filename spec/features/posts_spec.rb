@@ -9,6 +9,7 @@ describe 'navigate' do
     @post = FactoryGirl.create(:post)
     @post2 = FactoryGirl.create(:second_post)
     login_as(@user, :scope => :user)
+    resize_window_to_web
   end
 
   feature 'index' do
