@@ -11,7 +11,7 @@ class ApplicationPolicy
   end
 
   def show?
-    false
+    show?
   end
 
   def create?

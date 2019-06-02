@@ -1,9 +1,9 @@
-class PostPolicy < ApplicationPolicy
+class CategoryPolicy < ApplicationPolicy
 
   def show?
     record.user_id == user.id || admin?  
   end
-
+  
   def update?
     record.user_id == user.id || admin?   
   end
