@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_current_user_posts, only: [:index, :recent]
 
-  def index 
-    @posts = Post.order(created_at: :desc)
+  def index    
+    @posts = Post.where(user_id: current_user).order(created_at: :desc)
     if params[:category]
       @posts = @posts.where(category: params[:category])
     end
@@ -37,9 +38,11 @@ class PostsController < ApplicationController
   end
 
   def show
+    authorize @post
   end
 
   def destroy
+    authorize @post
     if @post.destroy
       redirect_to root_path, notice: 'Your post was deleted successfully'
     else
@@ -48,11 +51,7 @@ class PostsController < ApplicationController
   end
 
   def recent
-    if params[:category]
-      @posts = Post.where(category: params[:category]).order(created_at: :desc)
-    else 
-      @posts = Post.all.order(created_at: :desc)
-    end
+    @posts = @posts.limit(4)
   end
 
   def search  
@@ -75,4 +74,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def set_current_user_posts
+    @posts = Post.where(user_id: current_user).order(created_at: :desc)
+  end
 end

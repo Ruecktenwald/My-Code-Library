@@ -1,10 +1,7 @@
 class ApplicationController < ActionController::Base
   include Pundit
-  
   protect_from_forgery with: :exception
-  before_action :authenticate_user!
-  before_action :set_categories, :set_top_four
-
+  before_action :authenticate_user!, :set_categories, :set_top_four
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   private

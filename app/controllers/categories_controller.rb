@@ -28,10 +28,11 @@ class CategoriesController < ApplicationController
   end
 
   def edit
+    authorize @category
   end
 
   def update
-
+    authorize @category
     if @category.update(category_params)
       redirect_to @category, notice: "You successfully updated your post!"
     else
@@ -40,6 +41,7 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
+    authorize @category
     if @category.destroy
       redirect_to root_path, notice: 'Your category was deleted successfully'
     else
