@@ -5,6 +5,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    authorize @category
   end
 
   def top_four
