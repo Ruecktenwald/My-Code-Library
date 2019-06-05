@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190531180155) do
+ActiveRecord::Schema.define(version: 20190603210837) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20190531180155) do
     t.datetime "updated_at",             null: false
     t.integer  "user_id"
     t.integer  "status",     default: 0
+    t.string   "slug"
     t.index ["user_id"], name: "index_categories_on_user_id", using: :btree
   end
 

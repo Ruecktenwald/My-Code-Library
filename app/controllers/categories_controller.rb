@@ -50,6 +50,7 @@ class CategoriesController < ApplicationController
     end
   end
 
+
   private
 
   def category_params
@@ -59,10 +60,8 @@ class CategoriesController < ApplicationController
   def set_category
     @category = Category.find(params[:id])
   end
-end
 
-private
-
-def already_four?
- @categories.where(status: 1).count >= 4   
+  def already_four?
+    @categories.where(status: 1).count >= 4   
+  end
 end
