@@ -1,5 +1,5 @@
 User.create!(email: "test@test.com", password: "secret", 
-  password_confirmation: "secret", first_name: "Peter", last_name: "Wald",type: "AdminUser")
+  password_confirmation: "secret", first_name: "Peter", last_name: "Wald",type: "AdminUser", confirmed_at: Time.now)
 
 puts "One user was created."
 

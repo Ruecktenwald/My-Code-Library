@@ -16,6 +16,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'figaro'
 gem "bootstrap", ">= 4.3.1"
 gem "bootstrap_flash_messages", "~> 1.0.1"
 gem 'bourbon'
@@ -40,6 +41,7 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'better_errors'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

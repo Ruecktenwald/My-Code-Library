@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 20190603210837) do
     t.string   "code"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "category_id"
     t.integer  "user_id"
+    t.integer  "category_id"
     t.index ["category_id"], name: "index_posts_on_category_id", using: :btree
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
@@ -42,6 +42,10 @@ ActiveRecord::Schema.define(version: 20190603210837) do
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "type"
