@@ -1,5 +1,5 @@
 Rails.application.configure do
-  
+
   config.cache_classes = true
   config.eager_load = true
   config.consider_all_requests_local       = false
@@ -26,12 +26,12 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => "https://nameless-journey-14681.herokuapp.com"}
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-    address: ‘smtp.sendgrid.net’,
-    port: “25”,
-    domain: ‘heroku.com’,
-    user_name: ENV[“SG_USERNAME”],
-    password: ENV[“SG_PASSWORD”],
-    authentication: ‘plain’,
+    address: "smtp.sendgrid.net",
+    port: "25",
+    domain: "heroku.com",
+    user_name: ENV["SG_USERNAME"],
+    password: ENV["SG_PASSWORD"],
+    authentication: "plain",
     enable_starttls_auto: true
   }
 end
