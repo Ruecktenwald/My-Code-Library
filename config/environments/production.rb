@@ -1,6 +1,5 @@
 Rails.application.configure do
-
-  config.assets.initialize_on_precompile = false
+  
   config.cache_classes = true
   config.eager_load = true
   config.consider_all_requests_local       = false
