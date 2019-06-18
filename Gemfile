@@ -22,12 +22,12 @@ gem "bootstrap_flash_messages", "~> 1.0.1"
 gem 'bourbon'
 gem 'administrate', '~> 0.11.0'
 gem 'pundit', '~> 2.0', '>= 2.0.1'
+gem 'sendgrid-ruby'
 
 
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
-  #gem 'capybara', '~> 3.18'
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
@@ -45,9 +45,3 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-#gem "rspec-core", :github => "rspec/rspec-core"
-#gem "rspec-expectations", :github => "rspec/rspec-expectations"
-#gem "rspec-mocks", :github => "rspec/rspec-mocks"
-#gem "rspec-support", :github => "rspec/rspec-support"
-#gem "rspec-rails", :github => "rspec/rspec-rails"
