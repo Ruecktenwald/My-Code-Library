@@ -24,19 +24,21 @@ Rails.application.configure do
 
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => "https://nameless-journey-14681.herokuapp.com" }
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.default_url_options = { :host => 'https://nameless-journey-14681.herokuapp.com'}
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_options = { from: "MCLcheatsheets@gmail.com" }
 
-  ActionMailer::Base.smtp_settings = {
-    :user_name => ENV["SG_USERNAME"],
-    :password => ENV["SG_PASSWORD"],
-    :domain => 'heroku.com',
-    :address => 'smtp.sendgrid.net',
-    :port => 587,
-    :authentication => :plain,
-    :enable_starttls_auto => true
+  config.action_mailer.smtp_settings = {
+    address: "smtp.sendgrid.net",
+    port: 587,
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["SG_USERNAME"],
+    password: ENV["SG_PASSWORD"],
+    openssl_verify_mode: "none"
   }
+
 end
