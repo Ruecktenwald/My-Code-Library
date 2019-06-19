@@ -1,4 +1,5 @@
 Rails.application.configure do
+  include SendGrid
 
   config.cache_classes = true
   config.eager_load = true
@@ -31,7 +32,7 @@ Rails.application.configure do
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.default_url_options = { :host => 'nameless-journey-14681.herokuapp.com'}
 
-  ActionMailer::Base.smtp_settings = {
+  config.action_mailer.smtp_settings = {
     :user_name => ENV["SG_USERNAME"],
     :password => ENV["SG_PASSWORD"],
     :domain => 'heroku.com',
