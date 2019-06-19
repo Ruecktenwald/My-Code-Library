@@ -1,5 +1,4 @@
 Rails.application.configure do
-  include SendGrid
 
   config.cache_classes = true
   config.eager_load = true
