@@ -29,12 +29,12 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.default_url_options = { :host => 'https://nameless-journey-14681.herokuapp.com'}
+  config.action_mailer.default_url_options = { host: 'nameless-journey-14681.herokuapp.com', protocol: 'https'  }
 
   ActionMailer::Base.smtp_settings = {
     :user_name => ENV["SG_USERNAME"],
     :password => ENV["SG_PASSWORD"],
-    :domain => 'nameless-journey-14681.herokuapp.com',
+    :domain => 'herokuapp.com',
     :address => 'smtp.sendgrid.net',
     :port => 587,
     :authentication => :plain,
