@@ -29,7 +29,7 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.default_url_options = { host: 'https://nameless-journey-14681.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'nameless-journey-14681.herokuapp.com' }
 
   ActionMailer::Base.smtp_settings = {
     :user_name => ENV["SG_USERNAME"],
