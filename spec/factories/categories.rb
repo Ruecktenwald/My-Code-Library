@@ -1,7 +1,7 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :category do
-    name "Rails"
-    id 1
+    name { "Rails" }
+    id { 1 }
     user
   end
 end

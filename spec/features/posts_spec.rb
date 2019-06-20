@@ -1,26 +1,24 @@
 require 'rails_helper'
 
-
 describe 'navigate' do
   before do
-    @category = FactoryGirl.create(:category)
-    @user = FactoryGirl.create(:user)
-    @user2 = FactoryGirl.create(:user)
-    @post = FactoryGirl.create(:post)
-    @post2 = FactoryGirl.create(:second_post)
+    @category = create(:category)
+    @user = create(:user)
+    @user2 = create(:user)
     login_as(@user, :scope => :user)
-    resize_window_to_web
+    @post = create(:post)
+    @post2 = create(:second_post) 
   end
 
   feature 'index' do
 
     it 'can be reached successfully' do
-      visit posts_path
+      visit posts_path(@post)
       expect(page.status_code).to eq(200)
     end
 
     it 'has a title of Posts description' do
-      visit posts_path
+      visit post_path(@post)
       expect(page).to have_content(/How to install rspec/)
     end
 
@@ -35,9 +33,10 @@ describe 'navigate' do
   end
   
   feature 'navbar' do
-    
+
     it "new_post_path can be reached from menu in nav" do
-     
+
+      resize_window_to_mobile
       visit root_path
       click_on('Menu')
       click_on('New Post')
@@ -53,7 +52,7 @@ describe 'navigate' do
 
       visit "/posts/300/edit"
 
-      current_path.should == root_path
+      expect(current_path).to eq(root_path)
       expect(page).to have_content(/You are not authorized to perform this action./)
     end
   end
@@ -62,7 +61,7 @@ describe 'navigate' do
 
     it "can search post description with partial words" do
 
-      post = FactoryGirl.create(:post, description: "How to update gem file")
+      post = create(:post, description: "How to update gem file")
       visit root_path
       fill_in :search, with: "ge"
       click_button('Find my code')
@@ -77,6 +76,7 @@ describe 'navigate' do
       expect(page).to have_content(/Empty field!/)
     end
   end
+
   feature 'creation' do
 
     before do
@@ -102,7 +102,7 @@ describe 'navigate' do
 
       fill_in 'post[description]', with: "How to install ruby gem."
       fill_in 'post[code]', with: "update"
-      select('Rails', :from => 'post[category_id]')
+      select @category.name, from: 'post[category_id]'
       click_on "Save"
 
       expect(@user.posts.last.code).to eq("update")

@@ -2,10 +2,10 @@ require 'rails_helper'
 
 describe "creation" do
   before do
-    @category = FactoryGirl.create(:category)
-    @user = FactoryGirl.create(:user)
+    @category = FactoryBot.create(:category)
+    @user = FactoryBot.create(:user)
     login_as(@user, :scope => :user)
-    @post = FactoryGirl.create(:post)
+    @post = FactoryBot.create(:post)
   end
 
   it "can be created" do

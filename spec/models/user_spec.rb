@@ -4,7 +4,7 @@ feature "creation" do
 
   it "user can be created" do
 
-    @user = FactoryGirl.create(:user)
+    @user = FactoryBot.create(:user)
     login_as(@user, :scope => :user)
 
     expect(@user).to be_valid
