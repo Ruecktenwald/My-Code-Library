@@ -676,7 +676,11 @@ position: relative;
 background-color: #F2F3F4;
 }
 
-
+#t1 {
+  -moz-tab-size: 2; /* Firefox */
+  -o-tab-size: 2; /* Opera 10.6-12.1 */
+  tab-size: 2;
+}
 
 /***************************************
 flashes
