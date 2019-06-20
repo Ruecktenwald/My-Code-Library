@@ -1,5 +1,4 @@
-FactoryBot.define do
-  
+FactoryBot.define do 
   factory :post do
     category_id { 1 }
     description { "How to install rspec" }

@@ -7,7 +7,7 @@ describe "creation" do
     login_as(@user, :scope => :user)
     @post = FactoryBot.create(:post)
   end
-
+  
   it "can be created" do
     expect(@post).to be_valid
   end

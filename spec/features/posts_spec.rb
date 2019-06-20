@@ -7,18 +7,18 @@ describe 'navigate' do
     @user2 = create(:user)
     login_as(@user, :scope => :user)
     @post = create(:post)
-    @post2 = create(:second_post) 
+    @post2 = create(:second_post)
   end
 
   feature 'index' do
-
+  
     it 'can be reached successfully' do
       visit posts_path(@post)
       expect(page.status_code).to eq(200)
     end
 
     it 'has a title of Posts description' do
-      visit post_path(@post)
+      visit post_path(post)
       expect(page).to have_content(/How to install rspec/)
     end
 
@@ -35,11 +35,8 @@ describe 'navigate' do
   feature 'navbar' do
 
     it "new_post_path can be reached from menu in nav" do
-
-      resize_window_to_mobile
       visit root_path
-      click_on('Menu')
-      click_on('New Post')
+      click_link('test-id')
 
       expect(current_path).to eq("/posts/new")
     end
@@ -100,9 +97,9 @@ describe 'navigate' do
 
     it "will have a user associated with the post" do
 
-      fill_in 'post[description]', with: "How to install ruby gem."
-      fill_in 'post[code]', with: "update"
-      select @category.name, from: 'post[category_id]'
+      fill_in('Description', :with => "How to install ruby gem.")
+      fill_in('Code', :with => "update")
+      select(@category.name, from: 'post[category_id]')
       click_on "Save"
 
       expect(@user.posts.last.code).to eq("update")
