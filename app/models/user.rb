@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :categories
-  has_many :posts
+  has_many :categories, dependent: :destroy
+  has_many :posts, dependent: :destroy
   devise :database_authenticatable, :confirmable, :registerable,
     :recoverable, :rememberable, :validatable     
   

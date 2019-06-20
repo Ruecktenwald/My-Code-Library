@@ -24,13 +24,13 @@ Rails.application.configure do
 
   config.active_record.dump_schema_after_migration = false
   
-config.action_mailer.default_url_options = { host: 'nameless-journey-14681.herokuapp.com' }
- config.action_mailer.raise_delivery_errors = true
- config.action_mailer.delivery_method = :smtp
-host = 'nameless-journey-14681.herokuapp.com'
- protocol = 'https'
- config.action_mailer.default_url_options = { host: host, protocol: protocol}
- ActionMailer::Base.smtp_settings = {
+  config.action_mailer.default_url_options = { host: 'nameless-journey-14681.herokuapp.com' }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  host = 'nameless-journey-14681.herokuapp.com'
+  protocol = 'https'
+  config.action_mailer.default_url_options = { host: host, protocol: protocol}
+  ActionMailer::Base.smtp_settings = {
    :address        => 'smtp.sendgrid.net',
    :port           => '587',
    :authentication => :plain,
