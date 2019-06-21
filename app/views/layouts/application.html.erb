@@ -23,6 +23,11 @@
 
 <body>
 	<%= yield %>
+  <% if user_signed_in? %> 
+  <div class="myaccordion-back">
+    <%= link_to "Back", :back, class: "label-style-top-four " %>
+  </div>
+  <%end%>
 </body>
 
 <%= render 'layouts/footer' %>

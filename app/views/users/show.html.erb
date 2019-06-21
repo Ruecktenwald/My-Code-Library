@@ -1,13 +1,13 @@
-<section class="container">
-  <h1 class="label-style-btm"><%= current_user.first_name%>'s Profile:</h1>
+<section class="container-fluid middle">
+  <h1 class="label-style-btm"><%= current_user.first_name%>'s Profile</h1>
   
-  <div class="">  
+  <div class="myaccordion">  
     <%= link_to "All My Categories", categories_path, class: "nav-link" %>
   </div>
-  <div>
+  <div class="myaccordion">
     <%= link_to "Top Four Categories", top_four_path(@top_four_categories), class: "nav-link"  %>
   </div>
-  <div>
+  <div class="myaccordion">
     <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link"  %>
   </div>
 </section>
