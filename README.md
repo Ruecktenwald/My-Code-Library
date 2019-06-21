@@ -15,7 +15,7 @@ X user can create their own library of code reference
 
 
 - User can add their own category and choose their top four which are shown above "My Code Library"
-- User can create their own Category set
+X User can create their own Category set
 - User can chose to allow their library to be public
 - User can add other users library to a side bar
 - User can add other users individual posts to their library
@@ -32,8 +32,7 @@ X Bootstrap -> formatting
 
 TO DO:
 - refactor
-- redesign views
-- change text:hover color
+- redesign devise views
 - add 'allow library to be pubic' option with page
 - add user share pages 
 - add other users post to your own library
