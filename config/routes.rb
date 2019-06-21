@@ -12,11 +12,11 @@ Rails.application.routes.draw do
   get 'users/profile/:name' => 'users#show', as: 'users_profile'
   root to: 'static#homepage'
 
-  get 'categories/:top-four' => 'categories#top_four', as: 'top-four'
+  get 'categories/top-four/:scope' => 'categories#top_four', as: 'top-four'
   resources :categories
 
   get 'search' => 'posts#search', :as => 'search_page'
   get 'category/:category' => 'posts#index', as: 'category_posts'
-  get 'most-recent-posts/:recent' => 'posts#recent', :as => 'most_recent'
+  get 'posts/recent/:scope' => 'posts#recent', :as => 'most_recent'
   resources :posts  
 end

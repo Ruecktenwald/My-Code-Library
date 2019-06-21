@@ -51,7 +51,7 @@ class PostsController < ApplicationController
   end
 
   def recent
-    @posts = @posts.limit(4)
+    @posts = @posts.order(created_at: :desc).limit(4)
   end
 
   def search  
