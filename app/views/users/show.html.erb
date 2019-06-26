@@ -1,5 +1,5 @@
 <section class="container-fluid middle">
-  <h1 class="label-style-btm"><%= current_user.first_name%>'s Profile</h1>
+  <h1 class="label-style-btm"><%= current_user.first_name.capitalize%>'s Profile</h1>
   
   <div class="myaccordion">  
     <%= link_to "All My Categories", categories_path, class: "nav-link" %>
