@@ -3,7 +3,6 @@ class PostsController < ApplicationController
   before_action :set_current_user_posts, only: [:index, :recent]
 
   def index    
-    @posts = Post.where(user_id: current_user).order(created_at: :desc)
     if params[:category]
       @posts = @posts.where(category: params[:category])
     end
