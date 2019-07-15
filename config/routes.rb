@@ -13,10 +13,11 @@ Rails.application.routes.draw do
   root to: 'static#homepage'
 
   get 'categories/top-four/:scope' => 'categories#top_four', as: 'top-four'
-  resources :categories
+  resources :categories, param: :slug
 
   get 'search' => 'posts#search', :as => 'search_page'
   get 'category/:category' => 'posts#index', as: 'category_posts'
-  get 'posts/recent/:scope' => 'posts#recent', :as => 'most_recent'
-  resources :posts  
+  get 'posts/recent' => 'posts#recent', :as => 'most_recent'
+
+  resources :posts, param: :slug
 end
