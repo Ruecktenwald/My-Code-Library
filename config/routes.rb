@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get 'search' => 'posts#search', as: 'search_page'
   get 'category/:category' => 'posts#index', as: 'category_posts'
-  get 'posts/:id' => 'posts#recent', as: 'most_recent'
+  get 'posts/most-:id' => 'posts#recent', as: 'most_recent'
 
   resources :posts, param: :slug
 end
