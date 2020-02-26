@@ -24,6 +24,7 @@ gem 'bourbon'
 gem 'administrate', '~> 0.11.0'
 gem 'pundit', '~> 2.0', '>= 2.0.1'
 gem 'sendgrid-ruby'
+gem 'nokogiri'
 
 
 group :development, :test do
