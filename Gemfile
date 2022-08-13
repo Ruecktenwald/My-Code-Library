@@ -7,11 +7,11 @@ git_source(:github) do |repo_name|
 end
 
 gem "activesupport", ">= 5.2.4.3"
-gem 'rails', '~> 5.0.7', '>= 5.0.7.2'
+gem 'rails', '~> 7.0.3'
 gem 'puma', '~> 4.3'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 6.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
