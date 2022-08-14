@@ -341,7 +341,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   nokogiri
-  pg (>= 0.18, < 2.0)
+  pg
   pry-rails (~> 0.3.4)
   puma (~> 4.3)
   pundit (~> 2.0, >= 2.0.1)
