@@ -115,7 +115,12 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
-    database_cleaner (1.99.0)
+    database_cleaner (2.0.1)
+      database_cleaner-active_record (~> 2.0.0)
+    database_cleaner-active_record (2.0.1)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
     devise (4.8.1)
@@ -333,7 +338,7 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.2)
-  database_cleaner (~> 1.7)
+  database_cleaner
   devise (~> 4.6, >= 4.6.2)
   factory_bot_rails
   figaro
@@ -342,7 +347,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   nokogiri
   pg
-  pry-rails (~> 0.3.4)
+  pry-rails
   puma
   pundit (~> 2.0, >= 2.0.1)
   rails (>= 6.0)
