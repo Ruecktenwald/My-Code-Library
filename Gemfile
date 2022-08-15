@@ -31,12 +31,12 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
   gem 'capybara'
-  gem 'database_cleaner', '~> 1.7'
+  gem 'database_cleaner'
   gem "factory_bot_rails"
-  gem 'pry-rails', '~> 0.3.4'
+  gem 'pry-rails'
 end
 
-group :development do
+group :production do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
