@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
     if already_four? && @category.status == "top_four"
       redirect_to(root_path, alert: "#{@category.name.capitalize} was not saved. You already have four top categories. Please remove one if you would like to add a new top category.")
     elsif @category.save 
-      redirect_to(@category, :flash => [:success])
+      redirect_to @category, :flash => [:success])
     else
       render :new
     end
