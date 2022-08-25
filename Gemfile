@@ -10,7 +10,7 @@ gem "activesupport", ">= 5.2.4.3"
 gem 'rails', '>= 6.0'
 gem 'puma'
 gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
@@ -26,6 +26,7 @@ gem 'pundit', '~> 2.0', '>= 2.0.1'
 gem 'sendgrid-ruby'
 gem 'nokogiri'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 
 group :development, :test do
   gem 'byebug', platform: :mri
