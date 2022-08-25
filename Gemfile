@@ -34,10 +34,11 @@ group :development, :test do
   gem 'database_cleaner'
   gem "factory_bot_rails"
   gem 'pry-rails'
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :production do
-  gem 'web-console', '>= 3.3.0'
+
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
