@@ -25,11 +25,15 @@ Rails.application.configure do
 
   config.active_support.deprecation = :log
 
+  config.active_record.legacy_connection_handling = false
+
   config.active_record.migration_error = :page_load
 
   config.assets.debug = true
 
   config.assets.quiet = true
+
+  config.active_record.legacy_connection_handling = false
 
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
