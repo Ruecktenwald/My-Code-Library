@@ -28,6 +28,7 @@ gem 'nokogiri'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'execjs', '>= 0.3.0'
 gem 'json', ">= 1.8.0"
+gem 'rails_12factor', '~> 0.0.3'
 
 group :development, :test do
   gem 'byebug', platform: :mri
