@@ -26,7 +26,8 @@ gem 'pundit', '~> 2.0', '>= 2.0.1'
 gem 'sendgrid-ruby'
 gem 'nokogiri'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
+gem 'execjs', '>= 0.3.0'
+gem 'json', ">= 1.8.0"
 
 group :development, :test do
   gem 'byebug', platform: :mri
