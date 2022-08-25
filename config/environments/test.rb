@@ -1,6 +1,5 @@
 Rails.application.configure do
 
-  config.web_console.development_only = false
 
   config.cache_classes = true
 

@@ -25,7 +25,7 @@ gem 'administrate', '~> 0.13.0'
 gem 'pundit', '~> 2.0', '>= 2.0.1'
 gem 'sendgrid-ruby'
 gem 'nokogiri'
-
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -34,15 +34,15 @@ group :development, :test do
   gem 'database_cleaner'
   gem "factory_bot_rails"
   gem 'pry-rails'
-  gem 'web-console', '>= 3.3.0'
+
 end
 
-group :production do
-
+group :development do
+  gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
